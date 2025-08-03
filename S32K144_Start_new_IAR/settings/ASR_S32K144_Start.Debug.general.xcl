@@ -1,0 +1,17 @@
+"E:\BaiduNetdiskDownload\S32K144 AUTOSAR工具包\share_20230823\AUTOSAR_TOOLs\IAR_v8.40.2\arm\bin\armproc.dll" 
+
+"E:\BaiduNetdiskDownload\S32K144 AUTOSAR工具包\share_20230823\AUTOSAR_TOOLs\IAR_v8.40.2\arm\bin\armpemicro.dll" 
+
+"E:\BaiduNetdiskDownload\SIP-S32K14x\AUTOSAR_TOOLs\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\Debug\Exe\ASR_S32K144_Start.out" 
+
+--plugin="E:\BaiduNetdiskDownload\S32K144 AUTOSAR工具包\share_20230823\AUTOSAR_TOOLs\IAR_v8.40.2\arm\bin\armbat.dll" 
+
+--device_macro="E:\BaiduNetdiskDownload\S32K144 AUTOSAR工具包\share_20230823\AUTOSAR_TOOLs\IAR_v8.40.2\arm\config\debugger\NXP\KE1xF.dmac" 
+
+--device_macro="E:\BaiduNetdiskDownload\S32K144 AUTOSAR工具包\share_20230823\AUTOSAR_TOOLs\IAR_v8.40.2\arm\config\debugger\NXP\S32K14x_trace.dmac" 
+
+--flash_loader="E:\BaiduNetdiskDownload\S32K144 AUTOSAR工具包\share_20230823\AUTOSAR_TOOLs\IAR_v8.40.2\arm\config\flashloader\NXP\FlashS32K144.board" 
+
+
+
+
