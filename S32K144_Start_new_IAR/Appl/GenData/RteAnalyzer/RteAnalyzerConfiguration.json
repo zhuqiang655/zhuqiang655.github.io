@@ -2,7 +2,6 @@
    "description" : "RTE Analyzer configuration file",
    "version" : "1.2.0",
    "BswOsApplication" : "",
-   "COMDirectory" : "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/BSW/Com",
    "DataConsistencyAPIGroupList" : [
       {
          "CanBeNested" : "0",
@@ -405,12 +404,12 @@
       "MaxAtomicMemoryAccess" : "4"
    },
    "SIPDirectories" : [
-      "D:\\AutoSAR\\AUTOSAR_TOOLs\\S32K144_SIP\\MICROSAR\\CBD1800257_D01_S32K1xx\\"
+      "E:\\BaiduNetdiskDownload\\S32K144 AUTOSAR工具包\\share_20230823\\AUTOSAR_TOOLs\\S32K144_SIP\\MICROSAR\\CBD1800257_D01_S32K1xx\\"
    ],
    "SourceFileList" : [
       {
          "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
+            "E:/BaiduNetdiskDownload/S32K144 AUTOSAR¹¤¾ß°ü/share_20230823/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
             "Source",
             "..",
             "../Components",
@@ -420,7 +419,7 @@
       },
       {
          "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
+            "E:/BaiduNetdiskDownload/S32K144 AUTOSAR¹¤¾ß°ü/share_20230823/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
             "Source",
             "..",
             "../Components",
@@ -430,7 +429,7 @@
       },
       {
          "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
+            "E:/BaiduNetdiskDownload/S32K144 AUTOSAR¹¤¾ß°ü/share_20230823/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
             "Source",
             "..",
             "../Components",
@@ -440,483 +439,13 @@
       },
       {
          "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
+            "E:/BaiduNetdiskDownload/S32K144 AUTOSAR¹¤¾ß°ü/share_20230823/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
             "Source",
             "..",
             "../Components",
             "../Components/Rte_SystemApplication_OsCore0"
          ],
          "SourceFile" : "../Rte_SystemApplication_OsCore0.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/BswM"
-         ],
-         "SourceFile" : "Source/BswM.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_SchM_BswM"
-         ],
-         "SourceFile" : "Source/TSC_SchM_BswM.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/Can"
-         ],
-         "SourceFile" : "Source/Can.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_SchM_Can"
-         ],
-         "SourceFile" : "Source/TSC_SchM_Can.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/CanIf"
-         ],
-         "SourceFile" : "Source/CanIf.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_SchM_CanIf"
-         ],
-         "SourceFile" : "Source/TSC_SchM_CanIf.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/CanSM"
-         ],
-         "SourceFile" : "Source/CanSM.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_SchM_CanSM"
-         ],
-         "SourceFile" : "Source/TSC_SchM_CanSM.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/CanTp"
-         ],
-         "SourceFile" : "Source/CanTp.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_SchM_CanTp"
-         ],
-         "SourceFile" : "Source/TSC_SchM_CanTp.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/Com"
-         ],
-         "SourceFile" : "Source/Com.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_SchM_Com"
-         ],
-         "SourceFile" : "Source/TSC_SchM_Com.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/ComM"
-         ],
-         "SourceFile" : "Source/ComM.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_SchM_ComM"
-         ],
-         "SourceFile" : "Source/TSC_SchM_ComM.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/Dcm"
-         ],
-         "SourceFile" : "Source/Dcm.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_SchM_Dcm"
-         ],
-         "SourceFile" : "Source/TSC_SchM_Dcm.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/Dem"
-         ],
-         "SourceFile" : "Source/Dem.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_SchM_Dem"
-         ],
-         "SourceFile" : "Source/TSC_SchM_Dem.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/Det"
-         ],
-         "SourceFile" : "Source/Det.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_SchM_Det"
-         ],
-         "SourceFile" : "Source/TSC_SchM_Det.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/Dio"
-         ],
-         "SourceFile" : "Source/Dio.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_SchM_Dio"
-         ],
-         "SourceFile" : "Source/TSC_SchM_Dio.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/EcuM"
-         ],
-         "SourceFile" : "Source/EcuM.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_SchM_EcuM"
-         ],
-         "SourceFile" : "Source/TSC_SchM_EcuM.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/Mcu"
-         ],
-         "SourceFile" : "Source/Mcu.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_SchM_Mcu"
-         ],
-         "SourceFile" : "Source/TSC_SchM_Mcu.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/PduR"
-         ],
-         "SourceFile" : "Source/PduR.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_SchM_PduR"
-         ],
-         "SourceFile" : "Source/TSC_SchM_PduR.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/Port"
-         ],
-         "SourceFile" : "Source/Port.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_SchM_Port"
-         ],
-         "SourceFile" : "Source/TSC_SchM_Port.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/Spi"
-         ],
-         "SourceFile" : "Source/Spi.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_SchM_Spi"
-         ],
-         "SourceFile" : "Source/TSC_SchM_Spi.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_BswM"
-         ],
-         "SourceFile" : "Source/TSC_BswM.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/CddSbc"
-         ],
-         "SourceFile" : "Source/CddSbc.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_CddSbc"
-         ],
-         "SourceFile" : "Source/TSC_CddSbc.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_ComM"
-         ],
-         "SourceFile" : "Source/TSC_ComM.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/CtLedTask"
-         ],
-         "SourceFile" : "Source/CtLedTask.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_CtLedTask"
-         ],
-         "SourceFile" : "Source/TSC_CtLedTask.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_Dcm"
-         ],
-         "SourceFile" : "Source/TSC_Dcm.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/DemMaster_0"
-         ],
-         "SourceFile" : "Source/DemMaster_0.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_DemMaster_0"
-         ],
-         "SourceFile" : "Source/TSC_DemMaster_0.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/DemSatellite_0"
-         ],
-         "SourceFile" : "Source/DemSatellite_0.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_DemSatellite_0"
-         ],
-         "SourceFile" : "Source/TSC_DemSatellite_0.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_Det"
-         ],
-         "SourceFile" : "Source/TSC_Det.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_EcuM"
-         ],
-         "SourceFile" : "Source/TSC_EcuM.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/Os_OsCore0_swc"
-         ],
-         "SourceFile" : "Source/Os_OsCore0_swc.c"
-      },
-      {
-         "IncludeDirectoryList" : [
-            "D:/AutoSAR/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
-            "Source",
-            "..",
-            "../Components",
-            "../Components/TSC_Os_OsCore0_swc"
-         ],
-         "SourceFile" : "Source/TSC_Os_OsCore0_swc.c"
       }
    ],
    "TaskList" : [
@@ -945,5 +474,5 @@
          "TaskName" : "OsTask_BSW_SCHM"
       }
    ],
-   "TemplateDataBaseDirectory" : "D:\\AutoSAR\\AUTOSAR_TOOLs\\S32K144_SIP\\MICROSAR\\CBD1800257_D01_S32K1xx\\Generators\\Rte"
+   "TemplateDataBaseDirectory" : "E:\\BaiduNetdiskDownload\\S32K144 AUTOSAR工具包\\share_20230823\\AUTOSAR_TOOLs\\S32K144_SIP\\MICROSAR\\CBD1800257_D01_S32K1xx\\Generators\\Rte"
 }

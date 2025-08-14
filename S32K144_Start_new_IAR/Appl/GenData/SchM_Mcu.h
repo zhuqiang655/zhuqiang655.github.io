@@ -9,7 +9,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *          File:  SchM_Mcu.h
- *        Config:  S32K144_Start.dpa
+ *        Config:  S32K144_Start.dpa"
  *   ECU-Project:  MyECU
  *
  *     Generator:  MICROSAR RTE Generator Version 4.19.0

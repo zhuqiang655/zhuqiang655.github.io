@@ -16,7 +16,7 @@
         <ShowSource>1</ShowSource>
     </Trace1>
     <DebugChecksum>
-        <Checksum>3712779338</Checksum>
+        <Checksum>359168459</Checksum>
     </DebugChecksum>
     <Disassembly>
         <InstrCount>0</InstrCount>
@@ -68,12 +68,6 @@
         <CStepIntDis>_ 0</CStepIntDis>
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
     </JLinkDriver>
-    <DriverProfiling>
-        <Enabled>0</Enabled>
-        <Mode>1</Mode>
-        <Graph>0</Graph>
-        <Symbiont>0</Symbiont>
-    </DriverProfiling>
     <PE_STARTUP>
         <jtag_numbits_pre_ir>_ "0"</jtag_numbits_pre_ir>
         <jtag_tap_num>_ "0"</jtag_tap_num>
@@ -109,9 +103,9 @@
     </PE_STORED_DEVICES>
     <PE_PEDEBUG>
         <ERASE_PROGRAM_WITHOUT_ASKING>_ "1"</ERASE_PROGRAM_WITHOUT_ASKING>
-        <CURRENTMODE>_ "4"</CURRENTMODE>
         <CURRENTDEVICE>_ "NXP_S32K1xx_S32K144F512M15"</CURRENTDEVICE>
         <CURRENTCORE>_ "1"</CURRENTCORE>
+        <CURRENTMODE>_ "1"</CURRENTMODE>
     </PE_PEDEBUG>
     <PE_DEVICE>
         <CHIPMODE>_ "NXP_S32K1xx_S32K144F512M15"</CHIPMODE>
@@ -139,6 +133,20 @@
         <DEFAULT_MACRO_PATH>_ "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\bin\pemicro\P&amp;E"</DEFAULT_MACRO_PATH>
         <DEFAULT_LOGFILE_PATH>_ "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\bin\pemicro\P&amp;E"</DEFAULT_LOGFILE_PATH>
     </PE_SETTINGS>
+    <Breakpoints>
+        <Count>0</Count>
+    </Breakpoints>
+    <PlDriver>
+        <MemConfigValue>E:\BaiduNetdiskDownload\S32K144 AUTOSAR工具包\share_20230823\AUTOSAR_TOOLs\IAR_v8.40.2\arm\CONFIG\debugger\NXP\S32K144.ddf</MemConfigValue>
+    </PlDriver>
+    <Jet>
+        <DisableInterrupts>0</DisableInterrupts>
+        <LeaveRunning>0</LeaveRunning>
+        <MultiCoreRunAll>0</MultiCoreRunAll>
+    </Jet>
+    <ArmDriver>
+        <EnableCache>1</EnableCache>
+    </ArmDriver>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
@@ -148,6 +156,12 @@
         <LogFile>_ ""</LogFile>
         <Category>_ 0</Category>
     </LogFile>
+    <DriverProfiling>
+        <Enabled>0</Enabled>
+        <Mode>1</Mode>
+        <Graph>0</Graph>
+        <Symbiont>0</Symbiont>
+    </DriverProfiling>
     <CallStackLog>
         <Enabled>0</Enabled>
     </CallStackLog>
@@ -164,7 +178,9 @@
         <A0>_ "C:\Vector\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\Appl\BrsAsrMain.c" ""</A0>
         <A1>_ "C:\Vector\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\Appl\GenData\Os_Hal_EntryAsm_Lcfg.asm" ""</A1>
         <A2>_ "C:\Vector\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\BSW\EcuM\EcuM.c" ""</A2>
-        <Count>3</Count>
+        <A3>_ "C:\Vector\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\Device\startup.c" ""</A3>
+        <A4>_ "C:\Vector\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\Device\system_S32K148.c" ""</A4>
+        <Count>5</Count>
         <SuppressDialog>0</SuppressDialog>
     </Aliases>
 </settings>

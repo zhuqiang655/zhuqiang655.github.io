@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "E:\BaiduNetdiskDownload\S32K144 AUTOSAR工具包\share_20230823\AUTOSAR_TOOLs\IAR_v8.40.2\common\bin\cspybat" -f "E:\BaiduNetdiskDownload\SIP-S32K14x\AUTOSAR_TOOLs\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\settings\ASR_S32K144_Start.Debug.general.xcl" --backend -f "E:\BaiduNetdiskDownload\SIP-S32K14x\AUTOSAR_TOOLs\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\settings\ASR_S32K144_Start.Debug.driver.xcl" 
+& "E:\BaiduNetdiskDownload\S32K144 AUTOSAR工具包\share_20230823\AUTOSAR_TOOLs\IAR_v8.40.2\common\bin\cspybat" -f "E:\BaiduNetdiskDownload\S32K144 AUTOSAR工具包\share_20230823\AUTOSAR_TOOLs\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\settings\ASR_S32K144_Start.Debug.general.xcl" --backend -f "E:\BaiduNetdiskDownload\S32K144 AUTOSAR工具包\share_20230823\AUTOSAR_TOOLs\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\settings\ASR_S32K144_Start.Debug.driver.xcl" 
 }
 else
 {
-& "E:\BaiduNetdiskDownload\S32K144 AUTOSAR工具包\share_20230823\AUTOSAR_TOOLs\IAR_v8.40.2\common\bin\cspybat" -f "E:\BaiduNetdiskDownload\SIP-S32K14x\AUTOSAR_TOOLs\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\settings\ASR_S32K144_Start.Debug.general.xcl" --debug_file=$debugfile --backend -f "E:\BaiduNetdiskDownload\SIP-S32K14x\AUTOSAR_TOOLs\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\settings\ASR_S32K144_Start.Debug.driver.xcl" 
+& "E:\BaiduNetdiskDownload\S32K144 AUTOSAR工具包\share_20230823\AUTOSAR_TOOLs\IAR_v8.40.2\common\bin\cspybat" -f "E:\BaiduNetdiskDownload\S32K144 AUTOSAR工具包\share_20230823\AUTOSAR_TOOLs\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\settings\ASR_S32K144_Start.Debug.general.xcl" --debug_file=$debugfile --backend -f "E:\BaiduNetdiskDownload\S32K144 AUTOSAR工具包\share_20230823\AUTOSAR_TOOLs\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\settings\ASR_S32K144_Start.Debug.driver.xcl" 
 }
