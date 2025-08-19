@@ -23,5 +23,9 @@
 # define _COM_CFG_H_
 
 
+# define ComConf_ComSignal_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx 0
+
+# define ComConf_ComSignal_Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx 1
+
 
 #endif /* _COM_CFG_H_ */

@@ -9,7 +9,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *          File:  Rte_Hook.h
- *        Config:  S32K144_Start.dpa"
+ *        Config:  S32K144_Start.dpa
  *   ECU-Project:  MyECU
  *
  *     Generator:  MICROSAR RTE Generator Version 4.19.0
@@ -52,6 +52,8 @@
  *  Rte_CallHook_DemSatellite_0_CBReadData_OccurrenceCounter_OccurenceCounter_ReadData_Start
  *  Rte_CallHook_DemSatellite_0_CBReadData_OdometerValue_OdometerValue_ReadData_Return
  *  Rte_CallHook_DemSatellite_0_CBReadData_OdometerValue_OdometerValue_ReadData_Start
+ *  Rte_ComHook_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx_SigTx
+ *  Rte_ComHook_Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx_SigTx
  *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_0_requestedMode_Return
  *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_0_requestedMode_Start
  *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_1_requestedMode_Return

@@ -9,7 +9,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *          File:  Rte_Cbk.h
- *        Config:  S32K144_Start.dpa"
+ *        Config:  S32K144_Start.dpa
  *   ECU-Project:  MyECU
  *
  *     Generator:  MICROSAR RTE Generator Version 4.19.0
@@ -22,6 +22,9 @@
 /* double include prevention */
 #ifndef _RTE_CBK_H
 # define _RTE_CBK_H
+
+# include "Com.h"
+
 
 # define RTE_START_SEC_CODE
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_19.1 */

@@ -9,9 +9,9 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *          File:  Rte_CtLedTask.h
- *        Config:  C:/Vector/CBD1800257_D01_S32K1xx/Applications/S32K144_Start_new/S32K144_Start.dpa
+ *        Config:  C:/Users/yongy/Desktop/aaa/zhuqiang655.github.io/S32K144_Start_new_IAR/S32K144_Start.dpa
  *     SW-C Type:  CtLedTask
- *  Generated at:  Mon Jun  7 11:19:40 2021
+ *  Generated at:  Mon Aug 18 02:04:32 2025
  *
  *     Generator:  MICROSAR RTE Generator Version 4.19.0
  *                 RTE Core Version 1.19.0
@@ -134,7 +134,7 @@ FUNC(void, CtLedTask_CODE) CtLedTask_InitRunnable(void); /* PRQA S 0850 */ /* MD
  *---------------------------------------------------------------------------------------------------------------------
  *
  * Executed if at least one of the following trigger conditions occurred:
- *   - triggered on TimingEvent every 500ms
+ *   - triggered on TimingEvent every 300ms
  *
  *********************************************************************************************************************/
 

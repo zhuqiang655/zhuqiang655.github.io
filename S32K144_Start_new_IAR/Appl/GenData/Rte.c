@@ -9,7 +9,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *          File:  Rte.c
- *        Config:  S32K144_Start.dpa"
+ *        Config:  S32K144_Start.dpa
  *   ECU-Project:  MyECU
  *
  *     Generator:  MICROSAR RTE Generator Version 4.19.0
@@ -58,6 +58,13 @@
 #include "SchM_Spi.h"
 
 #include "Rte_Hook.h"
+
+#include "Com.h"
+#if defined(IL_ASRCOM_VERSION)
+# define RTE_USE_COM_TXSIGNAL_RDACCESS
+#endif
+
+#include "Rte_Cbk.h"
 
 /* AUTOSAR 3.x compatibility */
 #if !defined (RTE_LOCAL)

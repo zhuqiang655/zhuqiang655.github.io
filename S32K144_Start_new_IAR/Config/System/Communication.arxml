@@ -50,6 +50,12 @@
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/msg_Transmit_oCAN00</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Receive_oCAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Start_oCAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/msg_MyECU_Lamp_oCAN00</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
@@ -57,6 +63,12 @@
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/msg_Transmit_oCAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_Receive_oCAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_Start_oCAN00</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/msg_diag_Request_MyECU_oCAN00</FIBEX-ELEMENT-REF>
@@ -83,6 +95,12 @@
               <FIBEX-ELEMENT-REF DEST="N-PDU">/PDU/msg_diag_Response_MyECU_Tp_oCAN00</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Brake_Signal_oVCU_Start_oCAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Drive_Standy_oVCU_Start_oCAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/sig_LampCnt_omsg_MyECU_Lamp_oCAN00</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
@@ -96,6 +114,18 @@
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/sig_State_RearRightDoor_omsg_Receive_oCAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_Accelerator_Pedal_Position_oVCU_Start_oCAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_CRASH_Mode_oVCU_Receive_oCAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_Driving_Mode_oVCU_Receive_oCAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vehicle_Speed_oVCU_Receive_oCAN00</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
           </FIBEX-ELEMENTS>
         </SYSTEM>
@@ -411,8 +441,50 @@
                       <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
                       <IDENTIFIER>512</IDENTIFIER>
                     </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_VCU_Receive</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/MyECU/CN_CAN00/FP_VCU_Receive_Rx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/VCU_Receive_oCAN00</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/CAN00/CHNL/PT_VCU_Receive</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <IDENTIFIER>48</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_VCU_Start</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/MyECU/CN_CAN00/FP_VCU_Start_Tx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/VCU_Start_oCAN00</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/CAN00/CHNL/PT_VCU_Start</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <IDENTIFIER>32</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
                   </FRAME-TRIGGERINGS>
                   <I-SIGNAL-TRIGGERINGS>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_Brake_Signal_oVCU_Start</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/MyECU/CN_CAN00/SP_Brake_Signal_oVCU_Start_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Brake_Signal_oVCU_Start_oCAN00</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_Drive_Standy_oVCU_Start</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/MyECU/CN_CAN00/SP_Drive_Standy_oVCU_Start_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Drive_Standy_oVCU_Start_oCAN00</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
                     <I-SIGNAL-TRIGGERING>
                       <SHORT-NAME>ST_sig_LampCnt_omsg_MyECU_Lamp</SHORT-NAME>
                       <I-SIGNAL-PORT-REFS>
@@ -447,6 +519,34 @@
                         <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/MyECU/CN_CAN00/SP_sig_State_RearRightDoor_omsg_Receive_Rx</I-SIGNAL-PORT-REF>
                       </I-SIGNAL-PORT-REFS>
                       <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/sig_State_RearRightDoor_omsg_Receive_oCAN00</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VCU_Accelerator_Pedal_Position_oVCU_Start</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/MyECU/CN_CAN00/SP_VCU_Accelerator_Pedal_Position_oVCU_Start_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VCU_Accelerator_Pedal_Position_oVCU_Start_oCAN00</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VCU_CRASH_Mode_oVCU_Receive</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/MyECU/CN_CAN00/SP_VCU_CRASH_Mode_oVCU_Receive_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VCU_CRASH_Mode_oVCU_Receive_oCAN00</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VCU_Driving_Mode_oVCU_Receive</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/MyECU/CN_CAN00/SP_VCU_Driving_Mode_oVCU_Receive_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VCU_Driving_Mode_oVCU_Receive_oCAN00</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_Vehicle_Speed_oVCU_Receive</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/MyECU/CN_CAN00/SP_Vehicle_Speed_oVCU_Receive_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Vehicle_Speed_oVCU_Receive_oCAN00</I-SIGNAL-REF>
                     </I-SIGNAL-TRIGGERING>
                   </I-SIGNAL-TRIGGERINGS>
                   <PDU-TRIGGERINGS>
@@ -534,6 +634,42 @@
                         </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
                       </I-SIGNAL-TRIGGERINGS>
                     </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_VCU_Receive</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/MyECU/CN_CAN00/PP_VCU_Receive_Rx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_Receive_oCAN00</I-PDU-REF>
+                      <I-SIGNAL-TRIGGERINGS>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/CAN00/CHNL/ST_VCU_CRASH_Mode_oVCU_Receive</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/CAN00/CHNL/ST_VCU_Driving_Mode_oVCU_Receive</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/CAN00/CHNL/ST_Vehicle_Speed_oVCU_Receive</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                      </I-SIGNAL-TRIGGERINGS>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_VCU_Start</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/MyECU/CN_CAN00/PP_VCU_Start_Tx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_Start_oCAN00</I-PDU-REF>
+                      <I-SIGNAL-TRIGGERINGS>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/CAN00/CHNL/ST_Brake_Signal_oVCU_Start</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/CAN00/CHNL/ST_Drive_Standy_oVCU_Start</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/CAN00/CHNL/ST_VCU_Accelerator_Pedal_Position_oVCU_Start</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                      </I-SIGNAL-TRIGGERINGS>
+                    </PDU-TRIGGERING>
                   </PDU-TRIGGERINGS>
                 </CAN-PHYSICAL-CHANNEL>
               </PHYSICAL-CHANNELS>
@@ -605,6 +741,14 @@
                   <SHORT-NAME>FP_msg_Transmit_Tx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_VCU_Receive_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_VCU_Start_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
                 <I-PDU-PORT>
                   <SHORT-NAME>PP_msg_diag_Request_MyECU_Rx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
@@ -641,6 +785,22 @@
                   <SHORT-NAME>PP_msg_Transmit_Tx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_VCU_Receive_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_VCU_Start_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_Brake_Signal_oVCU_Start_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_Drive_Standy_oVCU_Start_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-SIGNAL-PORT>
                 <I-SIGNAL-PORT>
                   <SHORT-NAME>SP_sig_LampCnt_omsg_MyECU_Lamp_Tx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
@@ -664,6 +824,25 @@
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                   <TIMEOUT>0</TIMEOUT>
                 </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VCU_Accelerator_Pedal_Position_oVCU_Start_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VCU_CRASH_Mode_oVCU_Receive_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VCU_Driving_Mode_oVCU_Receive_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_Vehicle_Speed_oVCU_Receive_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
               </ECU-COMM-PORT-INSTANCES>
             </CAN-COMMUNICATION-CONNECTOR>
           </CONNECTORS>
@@ -680,6 +859,9 @@
             <I-SIGNAL-I-PDU-REF-CONDITIONAL>
               <I-SIGNAL-I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/msg_Receive_oCAN00</I-SIGNAL-I-PDU-REF>
             </I-SIGNAL-I-PDU-REF-CONDITIONAL>
+            <I-SIGNAL-I-PDU-REF-CONDITIONAL>
+              <I-SIGNAL-I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_Receive_oCAN00</I-SIGNAL-I-PDU-REF>
+            </I-SIGNAL-I-PDU-REF-CONDITIONAL>
           </I-SIGNAL-I-PDUS>
         </I-SIGNAL-I-PDU-GROUP>
         <I-SIGNAL-I-PDU-GROUP>
@@ -691,6 +873,9 @@
             </I-SIGNAL-I-PDU-REF-CONDITIONAL>
             <I-SIGNAL-I-PDU-REF-CONDITIONAL>
               <I-SIGNAL-I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/msg_Transmit_oCAN00</I-SIGNAL-I-PDU-REF>
+            </I-SIGNAL-I-PDU-REF-CONDITIONAL>
+            <I-SIGNAL-I-PDU-REF-CONDITIONAL>
+              <I-SIGNAL-I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_Start_oCAN00</I-SIGNAL-I-PDU-REF>
             </I-SIGNAL-I-PDU-REF-CONDITIONAL>
           </I-SIGNAL-I-PDUS>
         </I-SIGNAL-I-PDU-GROUP>
@@ -791,6 +976,30 @@
               <SHORT-NAME>msg_Transmit</SHORT-NAME>
               <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
               <PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/msg_Transmit_oCAN00</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>VCU_Receive_oCAN00</SHORT-NAME>
+          <FRAME-LENGTH>4</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>VCU_Receive</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_Receive_oCAN00</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>VCU_Start_oCAN00</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>VCU_Start</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_Start_oCAN00</PDU-REF>
               <START-POSITION>0</START-POSITION>
             </PDU-TO-FRAME-MAPPING>
           </PDU-TO-FRAME-MAPPINGS>
@@ -937,6 +1146,72 @@
           </I-SIGNAL-TO-PDU-MAPPINGS>
           <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
         </I-SIGNAL-I-PDU>
+        <I-SIGNAL-I-PDU>
+          <SHORT-NAME>VCU_Receive_oCAN00</SHORT-NAME>
+          <LENGTH>4</LENGTH>
+          <I-PDU-TIMING-SPECIFICATIONS>
+            <I-PDU-TIMING>
+              <MINIMUM-DELAY>0</MINIMUM-DELAY>
+            </I-PDU-TIMING>
+          </I-PDU-TIMING-SPECIFICATIONS>
+          <I-SIGNAL-TO-PDU-MAPPINGS>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>Vehicle_Speed</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Vehicle_Speed_oVCU_Receive_oCAN00</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>0</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VCU_Driving_Mode</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VCU_Driving_Mode_oVCU_Receive_oCAN00</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>16</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VCU_CRASH_Mode</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VCU_CRASH_Mode_oVCU_Receive_oCAN00</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>20</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+          </I-SIGNAL-TO-PDU-MAPPINGS>
+          <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
+        </I-SIGNAL-I-PDU>
+        <I-SIGNAL-I-PDU>
+          <SHORT-NAME>VCU_Start_oCAN00</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+          <I-PDU-TIMING-SPECIFICATIONS>
+            <I-PDU-TIMING>
+              <MINIMUM-DELAY>0</MINIMUM-DELAY>
+            </I-PDU-TIMING>
+          </I-PDU-TIMING-SPECIFICATIONS>
+          <I-SIGNAL-TO-PDU-MAPPINGS>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VCU_Accelerator_Pedal_Position</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VCU_Accelerator_Pedal_Position_oVCU_Start_oCAN00</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>0</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>Brake_Signal</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Brake_Signal_oVCU_Start_oCAN00</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>12</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>Drive_Standy</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Drive_Standy_oVCU_Start_oCAN00</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>16</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+          </I-SIGNAL-TO-PDU-MAPPINGS>
+          <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
+        </I-SIGNAL-I-PDU>
         <DCM-I-PDU>
           <SHORT-NAME>msg_diag_Request_MyECU_oCAN00</SHORT-NAME>
           <ADMIN-DATA>
@@ -1000,6 +1275,42 @@
     <AR-PACKAGE>
       <SHORT-NAME>ISignal</SHORT-NAME>
       <ELEMENTS>
+        <I-SIGNAL>
+          <SHORT-NAME>Brake_Signal_oVCU_Start_oCAN00</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>1</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/boolean</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Brake_Signal</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>Drive_Standy_oVCU_Start_oCAN00</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Drive_Standy</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
         <I-SIGNAL>
           <SHORT-NAME>sig_LampCnt_omsg_MyECU_Lamp_oCAN00</SHORT-NAME>
           <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
@@ -1090,11 +1401,105 @@
           </NETWORK-REPRESENTATION-PROPS>
           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/sig_State_RearRightDoor</SYSTEM-SIGNAL-REF>
         </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>VCU_Accelerator_Pedal_Position_oVCU_Start_oCAN00</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>12</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_Accelerator_Pedal_Position</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>VCU_CRASH_Mode_oVCU_Receive_oCAN00</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>4</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_CRASH_Mode</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>VCU_Driving_Mode_oVCU_Receive_oCAN00</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>4</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_Driving_Mode</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>Vehicle_Speed_oVCU_Receive_oCAN00</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Vehicle_Speed</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
       </ELEMENTS>
     </AR-PACKAGE>
     <AR-PACKAGE>
       <SHORT-NAME>Signal</SHORT-NAME>
       <ELEMENTS>
+        <SYSTEM-SIGNAL>
+          <SHORT-NAME>Brake_Signal</SHORT-NAME>
+          <DYNAMIC-LENGTH>false</DYNAMIC-LENGTH>
+          <PHYSICAL-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_Brake_Signal</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </PHYSICAL-PROPS>
+        </SYSTEM-SIGNAL>
+        <SYSTEM-SIGNAL>
+          <SHORT-NAME>Drive_Standy</SHORT-NAME>
+          <DYNAMIC-LENGTH>false</DYNAMIC-LENGTH>
+          <PHYSICAL-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_Drive_Standy</COMPU-METHOD-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </PHYSICAL-PROPS>
+        </SYSTEM-SIGNAL>
         <SYSTEM-SIGNAL>
           <SHORT-NAME>sig_LampCnt</SHORT-NAME>
           <DYNAMIC-LENGTH>false</DYNAMIC-LENGTH>
@@ -1146,6 +1551,52 @@
             <SW-DATA-DEF-PROPS-VARIANTS>
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_sig_State_RearRightDoor</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </PHYSICAL-PROPS>
+        </SYSTEM-SIGNAL>
+        <SYSTEM-SIGNAL>
+          <SHORT-NAME>VCU_Accelerator_Pedal_Position</SHORT-NAME>
+          <DYNAMIC-LENGTH>false</DYNAMIC-LENGTH>
+          <PHYSICAL-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_VCU_Accelerator_Pedal_Position</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_p</UNIT-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </PHYSICAL-PROPS>
+        </SYSTEM-SIGNAL>
+        <SYSTEM-SIGNAL>
+          <SHORT-NAME>VCU_CRASH_Mode</SHORT-NAME>
+          <DYNAMIC-LENGTH>false</DYNAMIC-LENGTH>
+          <PHYSICAL-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_VCU_CRASH_Mode</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </PHYSICAL-PROPS>
+        </SYSTEM-SIGNAL>
+        <SYSTEM-SIGNAL>
+          <SHORT-NAME>VCU_Driving_Mode</SHORT-NAME>
+          <DYNAMIC-LENGTH>false</DYNAMIC-LENGTH>
+          <PHYSICAL-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_VCU_Driving_Mode</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </PHYSICAL-PROPS>
+        </SYSTEM-SIGNAL>
+        <SYSTEM-SIGNAL>
+          <SHORT-NAME>Vehicle_Speed</SHORT-NAME>
+          <DYNAMIC-LENGTH>false</DYNAMIC-LENGTH>
+          <PHYSICAL-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_Vehicle_Speed</COMPU-METHOD-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_kmYh</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>

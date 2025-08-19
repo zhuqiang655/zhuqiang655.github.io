@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Cbk.h
- *   Generation Time: 2021-04-09 15:46:06
+ *   Generation Time: 2025-08-18 02:04:47
  *           Project: S32K144_Start - Version 1.0
  *          Delivery: CBD1800257_D01
  *      Tool Version: DaVinci Configurator  5.18.37 SP1
@@ -29,6 +29,21 @@
  *
  *********************************************************************************************************************/
 
+/**********************************************************************************************************************
+ * WARNING: This code has been generated with reduced-severity errors. 
+ * The created output files contain errors that have been ignored. Usage of the created files can lead to unpredictable behavior of the embedded code.
+ * Usage of the created files happens at own risk!
+ * 
+ * [Warning] COM01007 - Inconsistent textual value. 
+ * - [Reduced Severity due to User-Defined Parameter] Interpreted array value 0 of string value "0" is too short for array signal with signal length 2.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/Com/ComConfig/Ignition_State[0:ComSignalInitValue](value=0) (DefRef: /MICROSAR/Com/ComConfig/ComSignal/ComSignalInitValue)
+ * 
+ * [Warning] COM02300 - Invalid configuration of ComBitSize/ComSignalLength. 
+ * - [Reduced Severity due to User-Defined Parameter] If the ComSignalType of /ActiveEcuC/Com/ComConfig/Ignition_State is set to UINT8_N, therefore the parameter /ActiveEcuC/Com/ComConfig/Ignition_State[0:ComSignalEndianness](value=LITTLE_ENDIAN) must be set to OPAQUE.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/Com/ComConfig/Ignition_State[0:ComSignalEndianness](value=LITTLE_ENDIAN) (DefRef: /MICROSAR/Com/ComConfig/ComSignal/ComSignalEndianness)
+ *********************************************************************************************************************/
 
 #if !defined (COM_CBK_H)
 # define COM_CBK_H
@@ -56,7 +71,8 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define ComConf_ComIPdu_msg_Receive_oCAN00_2b456e3f_Rx                0u
+#define ComConf_ComIPdu_VCU_Receive_oCAN00_ea3d327e_Rx                0u
+#define ComConf_ComIPdu_msg_Receive_oCAN00_2b456e3f_Rx                1u
 /**\} */
 
 /**
@@ -67,8 +83,10 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define ComConf_ComIPdu_msg_MyECU_Lamp_oCAN00_818e1651_Tx             0u
-#define ComConf_ComIPdu_msg_Transmit_oCAN00_0723e95e_Tx               1u
+#define ComConf_ComIPdu_VCU_Com_Pdu                                   0u
+#define ComConf_ComIPdu_VCU_Start_oCAN00_e045137b_Tx                  1u
+#define ComConf_ComIPdu_msg_MyECU_Lamp_oCAN00_818e1651_Tx             2u
+#define ComConf_ComIPdu_msg_Transmit_oCAN00_0723e95e_Tx               3u
 /**\} */
 
 /**********************************************************************************************************************

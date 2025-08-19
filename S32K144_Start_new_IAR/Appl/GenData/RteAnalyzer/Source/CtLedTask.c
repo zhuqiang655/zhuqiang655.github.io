@@ -81,6 +81,7 @@ static void CtLedTask_TestDefines(void);
  *
  * Primitive Types:
  * ================
+ * uint16: Integer in interval [0...65535] (standard type)
  * uint8: Integer in interval [0...255] (standard type)
  *
  * Enumeration Types:

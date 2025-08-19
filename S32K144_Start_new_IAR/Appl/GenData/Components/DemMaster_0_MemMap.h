@@ -9,7 +9,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *          File:  DemMaster_0_MemMap.h
- *        Config:  S32K144_Start.dpa"
+ *        Config:  S32K144_Start.dpa
  *   ECU-Project:  MyECU
  *
  *     Generator:  MICROSAR RTE Generator Version 4.19.0

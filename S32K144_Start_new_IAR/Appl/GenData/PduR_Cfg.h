@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Cfg.h
- *   Generation Time: 2021-06-21 14:32:31
+ *   Generation Time: 2025-08-18 02:04:47
  *           Project: S32K144_Start - Version 1.0
  *          Delivery: CBD1800257_D01
  *      Tool Version: DaVinci Configurator  5.18.37 SP1
@@ -128,7 +128,8 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRDestPdu_msg_Receive_oCAN00_3867e0b8_Rx_16740ed0_Rx 0u
+#define PduRConf_PduRDestPdu_VCU_Receive_oCAN00_6d6f210b_Rx_058a26e6_Rx 0u
+#define PduRConf_PduRDestPdu_msg_Receive_oCAN00_3867e0b8_Rx_16740ed0_Rx 1u
 /**\} */
 
 /**
@@ -139,7 +140,8 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_16740ed0                       0u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_058a26e6                       0u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_16740ed0                       1u
 /**\} */
 
 /**
@@ -150,9 +152,11 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_8e8b997f                       0u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_087fd70d                       1u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_f4835c60                       2u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu                                0u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_8e8b997f                       2u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_087fd70d                       3u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_876dec5b                       1u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_f4835c60                       4u
 /**\} */
 
 /**
@@ -163,8 +167,10 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRDestPdu_msg_MyECU_Lamp_oCAN00_26f3473b_Tx        0u
-#define PduRConf_PduRDestPdu_msg_Transmit_oCAN00_9631a86b_Tx          1u
+#define PduRConf_PduRDestPdu_PduRDestPdu                              0u
+#define PduRConf_PduRDestPdu_VCU_Start_oCAN00_044341a6_Tx             1u
+#define PduRConf_PduRDestPdu_msg_MyECU_Lamp_oCAN00_26f3473b_Tx        2u
+#define PduRConf_PduRDestPdu_msg_Transmit_oCAN00_9631a86b_Tx          3u
 /**\} */
 
 /**

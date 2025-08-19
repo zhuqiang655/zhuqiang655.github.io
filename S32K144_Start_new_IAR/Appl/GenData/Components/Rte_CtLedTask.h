@@ -9,7 +9,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *          File:  Rte_CtLedTask.h
- *        Config:  S32K144_Start.dpa"
+ *        Config:  S32K144_Start.dpa
  *   ECU-Project:  MyECU
  *
  *     Generator:  MICROSAR RTE Generator Version 4.19.0
@@ -42,6 +42,16 @@ extern "C"
 
 # include "Rte_CtLedTask_Type.h"
 # include "Rte_DataHandleType.h"
+
+
+# ifndef RTE_CORE
+/**********************************************************************************************************************
+ * Init Values for unqueued S/R communication (primitive types only)
+ *********************************************************************************************************************/
+
+#  define Rte_InitValue_Brake_signal_u8sig (0U)
+#  define Rte_InitValue_Drive_Standy_u8sig (0U)
+# endif
 
 
 # ifndef RTE_CORE

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Types.h
- *   Generation Time: 2021-04-09 15:46:08
+ *   Generation Time: 2025-08-15 02:11:33
  *           Project: S32K144_Start - Version 1.0
  *          Delivery: CBD1800257_D01
  *      Tool Version: DaVinci Configurator  5.18.37 SP1
@@ -29,6 +29,21 @@
  *
  *********************************************************************************************************************/
 
+/**********************************************************************************************************************
+ * WARNING: This code has been generated with reduced-severity errors. 
+ * The created output files contain errors that have been ignored. Usage of the created files can lead to unpredictable behavior of the embedded code.
+ * Usage of the created files happens at own risk!
+ * 
+ * [Warning] COM01007 - Inconsistent textual value. 
+ * - [Reduced Severity due to User-Defined Parameter] Interpreted array value 0 of string value "0" is too short for array signal with signal length 2.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/Com/ComConfig/Ignition_State[0:ComSignalInitValue](value=0) (DefRef: /MICROSAR/Com/ComConfig/ComSignal/ComSignalInitValue)
+ * 
+ * [Warning] COM02300 - Invalid configuration of ComBitSize/ComSignalLength. 
+ * - [Reduced Severity due to User-Defined Parameter] If the ComSignalType of /ActiveEcuC/Com/ComConfig/Ignition_State is set to UINT8_N, therefore the parameter /ActiveEcuC/Com/ComConfig/Ignition_State[0:ComSignalEndianness](value=LITTLE_ENDIAN) must be set to OPAQUE.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/Com/ComConfig/Ignition_State[0:ComSignalEndianness](value=LITTLE_ENDIAN) (DefRef: /MICROSAR/Com/ComConfig/ComSignal/ComSignalEndianness)
+ *********************************************************************************************************************/
 
 #if !defined (COM_TYPES_H)
 # define COM_TYPES_H
