@@ -365,6 +365,19 @@
           <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
           <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
         </SW-BASE-TYPE>
+        <SW-BASE-TYPE UUID="98213F40-CB22-421B-B507-DB14A597BF83">
+          <SHORT-NAME>uint16</SHORT-NAME>
+          <CATEGORY>FIXED_LENGTH</CATEGORY>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="DV_SDG">
+                <SD GID="DV_ReadOnly">1</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <BASE-TYPE-SIZE>16</BASE-TYPE-SIZE>
+          <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+        </SW-BASE-TYPE>
       </ELEMENTS>
       <AR-PACKAGES>
         <AR-PACKAGE UUID="5D8B5C32-9B1A-4B8D-AA15-207AFF9CD90F">
@@ -460,6 +473,207 @@
                 </DATA-CONSTR-RULE>
               </DATA-CONSTR-RULES>
             </DATA-CONSTR>
+            <DATA-CONSTR UUID="CB07889D-C3B3-4417-9BC7-5FD6889FC018">
+              <SHORT-NAME>DC_Brake_Signal</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="EF4EB7F8-C473-40E7-807A-AD7D896A6780">
+              <SHORT-NAME>DC_Ignition_Sate</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="1F0F35F9-33AD-4395-A42D-5EC0BA153A4B">
+              <SHORT-NAME>DC_VCU_Accelerator_Pedal_Position</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">100</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="78593750-E341-480A-AF66-327B255FBAE7">
+              <SHORT-NAME>DC_VCU_CRASH_Mode</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">15</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="BC0382ED-DCCD-4E55-9091-6D490F89124E">
+              <SHORT-NAME>DC_VCU_Driving_Mode</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">15</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="A940F101-9DCC-4350-A5FB-BAC8DAC5BE63">
+              <SHORT-NAME>DC_Ignition_State</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="963F0A78-DFC1-4A87-8037-A5962B646BC4">
+          <SHORT-NAME>Semantics</SHORT-NAME>
+          <ELEMENTS>
+            <COMPU-METHOD UUID="916A65CD-7354-47C5-AC24-F75B8ED2B347">
+              <SHORT-NAME>CM_Drive_Standy</SHORT-NAME>
+              <CATEGORY>LINEAR</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2550</UPPER-LIMIT>
+                    <COMPU-RATIONAL-COEFFS>
+                      <COMPU-NUMERATOR>
+                        <V>0</V>
+                        <V>0.1</V>
+                      </COMPU-NUMERATOR>
+                      <COMPU-DENOMINATOR>
+                        <V>1</V>
+                      </COMPU-DENOMINATOR>
+                    </COMPU-RATIONAL-COEFFS>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="8A8DBF9F-879D-488A-A1DE-4324AF289A21">
+              <SHORT-NAME>CM_Vehicle_Speed</SHORT-NAME>
+              <CATEGORY>LINEAR</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <UNIT-REF DEST="UNIT">/DataType/Unit/U_kmYh</UNIT-REF>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2550</UPPER-LIMIT>
+                    <COMPU-RATIONAL-COEFFS>
+                      <COMPU-NUMERATOR>
+                        <V>0</V>
+                        <V>0.1</V>
+                      </COMPU-NUMERATOR>
+                      <COMPU-DENOMINATOR>
+                        <V>1</V>
+                      </COMPU-DENOMINATOR>
+                    </COMPU-RATIONAL-COEFFS>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="9B6F56AB-B33F-4669-8D27-3EDFBDF5F055">
+          <SHORT-NAME>Unit</SHORT-NAME>
+          <ELEMENTS>
+            <UNIT UUID="AD912258-98A9-4C80-9F8C-7A46C38E34AB">
+              <SHORT-NAME>U_kmYh</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DISPLAY-NAME>km/h</DISPLAY-NAME>
+              <FACTOR-SI-TO-UNIT>1</FACTOR-SI-TO-UNIT>
+              <OFFSET-SI-TO-UNIT>0</OFFSET-SI-TO-UNIT>
+            </UNIT>
+            <UNIT UUID="562C8CD5-B871-45F8-9751-528691B52F47">
+              <SHORT-NAME>U_p</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DISPLAY-NAME>%</DISPLAY-NAME>
+              <FACTOR-SI-TO-UNIT>1</FACTOR-SI-TO-UNIT>
+              <OFFSET-SI-TO-UNIT>0</OFFSET-SI-TO-UNIT>
+            </UNIT>
           </ELEMENTS>
         </AR-PACKAGE>
       </AR-PACKAGES>

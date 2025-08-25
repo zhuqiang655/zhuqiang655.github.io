@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Lcfg.h
- *   Generation Time: 2021-04-09 15:46:07
+ *   Generation Time: 2025-08-26 00:38:11
  *           Project: S32K144_Start - Version 1.0
  *          Delivery: CBD1800257_D01
  *      Tool Version: DaVinci Configurator  5.18.37 SP1
@@ -142,8 +142,8 @@
 #define DEM_CFG_PASSEDTHRESHOLDOFDEBOUNCETABLE                        STD_ON
 #define DEM_CFG_PRECONFIRMEDTHRESHOLDOFDEBOUNCETABLE                  STD_OFF  /**< Deactivateable: 'Dem_Cfg_DebounceTable.PreconfirmedThreshold' Reason: 'DemDebounceCounterPreconfirmedThreshold is not required' */
 #define DEM_CFG_STORAGEOFDEBOUNCETABLE                                STD_ON
-#define DEM_CFG_STORAGETHRESHOLDOFDEBOUNCETABLE                       STD_OFF  /**< Deactivateable: 'Dem_Cfg_DebounceTable.StorageThreshold' Reason: 'DemEventDebounceCounterStorageThreshold is not required. (due Parameter DemGeneral/DemTypeOfFreezeFrameRecordNumeration != DEM_FF_RECNUM_CONFIGURED)' */
-#define DEM_CFG_STORAGETIMERCYCLESOFDEBOUNCETABLE                     STD_OFF  /**< Deactivateable: 'Dem_Cfg_DebounceTable.StorageTimerCycles' Reason: 'DemDebounceTimeStorageThreshold is not required.  (due Parameter DemGeneral/DemTypeOfFreezeFrameRecordNumeration != DEM_FF_RECNUM_CONFIGURED)' */
+#define DEM_CFG_STORAGETHRESHOLDOFDEBOUNCETABLE                       STD_OFF  /**< Deactivateable: 'Dem_Cfg_DebounceTable.StorageThreshold' Reason: 'DemEventDebounceCounterStorageThreshold is not required.' */
+#define DEM_CFG_STORAGETIMERCYCLESOFDEBOUNCETABLE                     STD_OFF  /**< Deactivateable: 'Dem_Cfg_DebounceTable.StorageTimerCycles' Reason: 'DemDebounceTimeStorageThreshold is not required. ' */
 #define DEM_CFG_DTCGROUPMASK                                          STD_OFF  /**< Deactivateable: 'Dem_Cfg_DtcGroupMask' Reason: 'No configured DemGroupOfDTC containers.' */
 #define DEM_CFG_GROUPMASKOFDTCGROUPMASK                               STD_OFF  /**< Deactivateable: 'Dem_Cfg_DtcGroupMask.GroupMask' Reason: 'No configured DemGroupOfDTC containers.' */
 #define DEM_CFG_UDSGROUPDTCOFDTCGROUPMASK                             STD_OFF  /**< Deactivateable: 'Dem_Cfg_DtcGroupMask.UdsGroupDtc' Reason: 'No configured DemGroupOfDTC containers.' */

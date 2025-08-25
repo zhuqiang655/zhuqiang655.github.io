@@ -1727,18 +1727,18 @@
                     </APPLICATION-ERROR>
                   </POSSIBLE-ERRORS>
                 </CLIENT-SERVER-INTERFACE>
-                <CLIENT-SERVER-INTERFACE UUID="d99b5d69-e440-4ca1-b923-627e946717d5">
+                <CLIENT-SERVER-INTERFACE UUID="90bedfee-19ae-4e29-a19f-68968f2d4516">
                   <SHORT-NAME>DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</SHORT-NAME>
                   <IS-SERVICE>true</IS-SERVICE>
                   <SERVICE-KIND>DIAGNOSTIC-COMMUNICATION-MANAGER</SERVICE-KIND>
                   <OPERATIONS>
-                    <CLIENT-SERVER-OPERATION UUID="5834a40a-335c-4ff2-a9ad-6b848b9aac4e">
+                    <CLIENT-SERVER-OPERATION UUID="aab7869c-532a-414e-8d99-c8c87f7b7333">
                       <SHORT-NAME>ReadData</SHORT-NAME>
                       <DESC>
                         <L-2 L="FOR-ALL"/>
                       </DESC>
                       <ARGUMENTS>
-                        <ARGUMENT-DATA-PROTOTYPE UUID="a5770cd3-ff87-4303-8a4e-f7dfbcbf91c5">
+                        <ARGUMENT-DATA-PROTOTYPE UUID="afb332f2-e5c8-4f1a-b97c-953d79f669ea">
                           <SHORT-NAME>OpStatus</SHORT-NAME>
                           <DESC>
                             <L-2 L="FOR-ALL"/>
@@ -1746,7 +1746,7 @@
                           <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
                           <DIRECTION>IN</DIRECTION>
                         </ARGUMENT-DATA-PROTOTYPE>
-                        <ARGUMENT-DATA-PROTOTYPE UUID="20cdcfb8-9772-49dd-bf05-0ed2681c0f7b">
+                        <ARGUMENT-DATA-PROTOTYPE UUID="c489e962-791e-4740-889d-67315b38fb89">
                           <SHORT-NAME>Data</SHORT-NAME>
                           <DESC>
                             <L-2 L="FOR-ALL"/>
@@ -1760,13 +1760,13 @@
                         <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value/DCM_E_PENDING</POSSIBLE-ERROR-REF>
                       </POSSIBLE-ERROR-REFS>
                     </CLIENT-SERVER-OPERATION>
-                    <CLIENT-SERVER-OPERATION UUID="05d836de-280e-459e-b540-5b48c5b52810">
+                    <CLIENT-SERVER-OPERATION UUID="6e7fa632-1abf-4bd2-9106-16661ad9ee2c">
                       <SHORT-NAME>ConditionCheckRead</SHORT-NAME>
                       <DESC>
                         <L-2 L="FOR-ALL"/>
                       </DESC>
                       <ARGUMENTS>
-                        <ARGUMENT-DATA-PROTOTYPE UUID="5e639655-2f94-46fc-b855-cae7ebd1231f">
+                        <ARGUMENT-DATA-PROTOTYPE UUID="e9115c8d-af75-475a-90e9-a444ee4d4c30">
                           <SHORT-NAME>OpStatus</SHORT-NAME>
                           <DESC>
                             <L-2 L="FOR-ALL"/>
@@ -1774,7 +1774,7 @@
                           <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
                           <DIRECTION>IN</DIRECTION>
                         </ARGUMENT-DATA-PROTOTYPE>
-                        <ARGUMENT-DATA-PROTOTYPE UUID="84a70441-fa85-4010-b56d-43df4701ae6d">
+                        <ARGUMENT-DATA-PROTOTYPE UUID="b3df7d4e-de1b-47d4-b3cd-c9ddedc5f2b9">
                           <SHORT-NAME>ErrorCode</SHORT-NAME>
                           <DESC>
                             <L-2 L="FOR-ALL"/>
@@ -1788,13 +1788,13 @@
                         <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value/DCM_E_PENDING</POSSIBLE-ERROR-REF>
                       </POSSIBLE-ERROR-REFS>
                     </CLIENT-SERVER-OPERATION>
-                    <CLIENT-SERVER-OPERATION UUID="789e0c88-52e9-4a10-9758-545109489f6f">
+                    <CLIENT-SERVER-OPERATION UUID="f3c27ed4-749c-47ac-b8d1-299cfface28a">
                       <SHORT-NAME>WriteData</SHORT-NAME>
                       <DESC>
                         <L-2 L="FOR-ALL"/>
                       </DESC>
                       <ARGUMENTS>
-                        <ARGUMENT-DATA-PROTOTYPE UUID="be1c1263-24a5-4fcf-8d05-8bb1c38744e7">
+                        <ARGUMENT-DATA-PROTOTYPE UUID="256b089c-edd3-4028-8b1b-9c503a0d60a9">
                           <SHORT-NAME>Data</SHORT-NAME>
                           <DESC>
                             <L-2 L="FOR-ALL"/>
@@ -1802,7 +1802,7 @@
                           <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_Data4ByteType</TYPE-TREF>
                           <DIRECTION>IN</DIRECTION>
                         </ARGUMENT-DATA-PROTOTYPE>
-                        <ARGUMENT-DATA-PROTOTYPE UUID="1e4a0e00-ba2d-4989-b4c0-9c4eb452ebc3">
+                        <ARGUMENT-DATA-PROTOTYPE UUID="d8e26f01-8bd7-404d-8762-dbc24febf598">
                           <SHORT-NAME>OpStatus</SHORT-NAME>
                           <DESC>
                             <L-2 L="FOR-ALL"/>
@@ -1810,7 +1810,7 @@
                           <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
                           <DIRECTION>IN</DIRECTION>
                         </ARGUMENT-DATA-PROTOTYPE>
-                        <ARGUMENT-DATA-PROTOTYPE UUID="cdb1a9fa-c3b7-4a1b-8033-06cb0c951ef4">
+                        <ARGUMENT-DATA-PROTOTYPE UUID="c280efa5-6e3c-488c-9c33-488b7feb4f9e">
                           <SHORT-NAME>ErrorCode</SHORT-NAME>
                           <DESC>
                             <L-2 L="FOR-ALL"/>
@@ -1826,11 +1826,11 @@
                     </CLIENT-SERVER-OPERATION>
                   </OPERATIONS>
                   <POSSIBLE-ERRORS>
-                    <APPLICATION-ERROR UUID="73993b00-f396-41ad-b95e-f850e9cedfcd">
+                    <APPLICATION-ERROR UUID="19ad3d0f-47f5-4624-9455-236d989d757f">
                       <SHORT-NAME>E_NOT_OK</SHORT-NAME>
                       <ERROR-CODE>1</ERROR-CODE>
                     </APPLICATION-ERROR>
-                    <APPLICATION-ERROR UUID="d27cafa6-1ba4-49ea-80e0-9287d0b1013d">
+                    <APPLICATION-ERROR UUID="976795b1-f527-4a33-b3da-5265eebec57f">
                       <SHORT-NAME>DCM_E_PENDING</SHORT-NAME>
                       <ERROR-CODE>10</ERROR-CODE>
                     </APPLICATION-ERROR>
@@ -1873,7 +1873,7 @@
                       <SHORT-NAME>SecurityAccess_Level_01</SHORT-NAME>
                       <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_01</REQUIRED-INTERFACE-TREF>
                     </R-PORT-PROTOTYPE>
-                    <R-PORT-PROTOTYPE UUID="a2fe51c6-b601-4039-8395-01d39962eee9">
+                    <R-PORT-PROTOTYPE UUID="2f9fc9ae-a0cd-4aab-a0b1-78eb56df72bb">
                       <SHORT-NAME>DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</SHORT-NAME>
                       <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</REQUIRED-INTERFACE-TREF>
                     </R-PORT-PROTOTYPE>
@@ -2034,7 +2034,7 @@
                               </OPERATION-IREF>
                               <TIMEOUT>0</TIMEOUT>
                             </SYNCHRONOUS-SERVER-CALL-POINT>
-                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="e52ff2fb-c03b-4721-953d-13dcf3c7588f">
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="6b92a5d1-f031-468f-bc6c-1c819f1c5cf0">
                               <SHORT-NAME>OpServerCallDcm_MainFunction_ReadData_DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</SHORT-NAME>
                               <OPERATION-IREF>
                                 <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</CONTEXT-R-PORT-REF>
@@ -2042,7 +2042,7 @@
                               </OPERATION-IREF>
                               <TIMEOUT>0</TIMEOUT>
                             </SYNCHRONOUS-SERVER-CALL-POINT>
-                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="c4f1d757-bbf1-464b-af32-b685af15a079">
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="73bf74bb-1783-4367-add7-e1c55d0ed2ee">
                               <SHORT-NAME>OpServerCallDcm_MainFunction_ConditionCheckRead_DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</SHORT-NAME>
                               <OPERATION-IREF>
                                 <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</CONTEXT-R-PORT-REF>
@@ -2050,7 +2050,7 @@
                               </OPERATION-IREF>
                               <TIMEOUT>0</TIMEOUT>
                             </SYNCHRONOUS-SERVER-CALL-POINT>
-                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="651142f7-6d45-4140-92b8-c3a5f63a5645">
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="fcfaf469-6bc2-4eea-8c5d-bfef60f95368">
                               <SHORT-NAME>OpServerCallDcm_MainFunction_WriteData_DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</SHORT-NAME>
                               <OPERATION-IREF>
                                 <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</CONTEXT-R-PORT-REF>

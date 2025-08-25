@@ -115,20 +115,20 @@
         <Splitter File=".\Config\ECUC\S32K144_Start_BswM_ecuc.arxml">
             <Module Name="BswM"/>
         </Splitter>
-        <Splitter File=".\Config\ECUC\S32K144_Start_Dem_ecuc.arxml">
-            <Module Name="Dem"/>
-        </Splitter>
         <Splitter File=".\Config\ECUC\S32K144_Start_Base_ecuc.arxml">
             <Module Name="Base"/>
         </Splitter>
         <Splitter File=".\Config\ECUC\S32K144_Start_Spi_ecuc.arxml">
             <Module Name="Spi"/>
         </Splitter>
+        <Splitter File=".\Config\ECUC\S32K144_Start_Dem_ecuc.arxml">
+            <Module Name="Dem"/>
+        </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
     </EcucSplitter>
     <Display LastVersion="5.18.37 SP1">
-        <FileSet Id="" CS="8f7693c5">
-            <File Order="0" EcuInstance="MyECU" Hash="c2db234ceac7c55c2cd3a406817a96fb" FileCategory="legacy_communication_data">$(DpaProjectFolder)\Inputfiles\CAN.dbc</File>
+        <FileSet Id="" CS="443b2033">
+            <File Order="0" EcuInstance="MyECU" Hash="9a28a8341418fab3101574f2c9ccb712" FileCategory="legacy_communication_data">$(DpaProjectFolder)\Inputfiles\CAN.dbc</File>
             <Diagnostic>
                 <Description Hash="e0ae908913d93caf691f8c3440b9d7bb">$(DpaProjectFolder)\Inputfiles\ForTraining.cdd</Description>
                 <Ecu>New_ECU_1</Ecu>
@@ -163,9 +163,7 @@
             <Settings Name="com.vector.cfg.gui.core.generators.ExtGenStepOrder">
                 <Setting Value="INTERNAL_GENERATION" Name="Order"/>
             </Settings>
-            <Settings Name="com.vector.cfg.gui.core.generators.GeneratedModules">
-                <Setting Value="false" Name="Os"/>
-            </Settings>
+            <Settings Name="com.vector.cfg.gui.core.generators.GeneratedModules"/>
             <Settings Name="com.vector.cfg.gui.core.generators.GenerationTarget">
                 <Setting Value="Real Target" Name="TargetType"/>
             </Settings>

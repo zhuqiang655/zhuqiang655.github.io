@@ -89,6 +89,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_OdometerValue_Odo
 #  define RTE_RUNNABLE_Dem_MasterMainFunction Dem_MasterMainFunction
 #  define RTE_RUNNABLE_GetDTCOfEvent Dem_GetDTCOfEvent
 #  define RTE_RUNNABLE_GetDTCStatusAvailabilityMask Dem_GetDTCStatusAvailabilityMask
+#  define RTE_RUNNABLE_GetDTCSuppression Dem_GetDTCSuppression
 #  define RTE_RUNNABLE_GetDebouncingOfEvent Dem_GetDebouncingOfEvent
 #  define RTE_RUNNABLE_GetEventEnableCondition Dem_GetEventEnableCondition
 #  define RTE_RUNNABLE_GetEventExtendedDataRecordEx Dem_GetEventExtendedDataRecordEx
@@ -104,6 +105,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_OdometerValue_Odo
 #  define RTE_RUNNABLE_GetOperationCycleState Dem_GetOperationCycleState
 #  define RTE_RUNNABLE_PostRunRequested Dem_PostRunRequested
 #  define RTE_RUNNABLE_SelectDTC Dem_SelectDTC
+#  define RTE_RUNNABLE_SetDTCSuppression Dem_SetDTCSuppression
 #  define RTE_RUNNABLE_SetOperationCycleState Dem_SetOperationCycleState
 # endif
 
@@ -111,6 +113,7 @@ FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_ClearDTC(uint8 parg0); /* PRQA S 0850
 FUNC(void, DemMaster_0_CODE) Dem_MasterMainFunction(void); /* PRQA S 0850, 3451 */ /* MD_MSR_19.8, MD_Rte_3451 */
 FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_GetDTCOfEvent(Dem_EventIdType EventId, Dem_DTCFormatType DTCFormat, P2VAR(uint32, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) DTCOfEvent); /* PRQA S 0850, 3451 */ /* MD_MSR_19.8, MD_Rte_3451 */
 FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_GetDTCStatusAvailabilityMask(uint8 ClientId, P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) DTCStatusMask); /* PRQA S 0850, 3451 */ /* MD_MSR_19.8, MD_Rte_3451 */
+FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_GetDTCSuppression(uint8 parg0, P2VAR(boolean, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) SuppressionStatus); /* PRQA S 0850, 1330, 3451 */ /* MD_MSR_19.8, MD_Rte_1330, MD_Rte_3451 */
 FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_GetDebouncingOfEvent(Dem_EventIdType EventId, P2VAR(Dem_DebouncingStateType, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) DebouncingState); /* PRQA S 0850, 3451 */ /* MD_MSR_19.8, MD_Rte_3451 */
 FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_GetEventEnableCondition(Dem_EventIdType EventId, P2VAR(boolean, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) ConditionFullfilled); /* PRQA S 0850, 3451 */ /* MD_MSR_19.8, MD_Rte_3451 */
 # ifdef RTE_PTR2ARRAYBASETYPE_PASSING
@@ -134,6 +137,7 @@ FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_GetNumberOfEventMemoryEntries(uint8 p
 FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_GetOperationCycleState(Dem_OperationCycleIdType parg0, P2VAR(Dem_OperationCycleStateType, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) CycleState); /* PRQA S 0850, 1330, 3451 */ /* MD_MSR_19.8, MD_Rte_1330, MD_Rte_3451 */
 FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_PostRunRequested(P2VAR(boolean, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) IsRequested); /* PRQA S 0850, 3451 */ /* MD_MSR_19.8, MD_Rte_3451 */
 FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_SelectDTC(uint8 parg0, uint32 DTC, Dem_DTCFormatType DTCFormat, Dem_DTCOriginType DTCOrigin); /* PRQA S 0850, 1330, 3451 */ /* MD_MSR_19.8, MD_Rte_1330, MD_Rte_3451 */
+FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_SetDTCSuppression(uint8 parg0, boolean SuppressionStatus); /* PRQA S 0850, 1330, 3451 */ /* MD_MSR_19.8, MD_Rte_1330, MD_Rte_3451 */
 FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_SetOperationCycleState(Dem_OperationCycleIdType parg0, Dem_OperationCycleStateType CycleState); /* PRQA S 0850, 1330, 3451 */ /* MD_MSR_19.8, MD_Rte_1330, MD_Rte_3451 */
 
 # define DemMaster_0_STOP_SEC_CODE
@@ -164,6 +168,14 @@ FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_SetOperationCycleState(Dem_OperationC
 #  define RTE_E_ClearDTC_E_NOT_OK (1U)
 
 #  define RTE_E_ClearDTC_E_OK (0U)
+
+#  define RTE_E_DTCSuppression_DEM_PENDING (4U)
+
+#  define RTE_E_DTCSuppression_DEM_WRONG_DTC (8U)
+
+#  define RTE_E_DTCSuppression_DEM_WRONG_DTCORIGIN (9U)
+
+#  define RTE_E_DTCSuppression_E_NOT_OK (1U)
 
 #  define RTE_E_DemServices_E_NOT_OK (1U)
 

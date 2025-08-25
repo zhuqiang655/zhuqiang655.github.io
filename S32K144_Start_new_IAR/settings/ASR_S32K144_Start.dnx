@@ -16,7 +16,7 @@
         <ShowSource>1</ShowSource>
     </Trace1>
     <DebugChecksum>
-        <Checksum>359168459</Checksum>
+        <Checksum>1786205269</Checksum>
     </DebugChecksum>
     <Disassembly>
         <InstrCount>0</InstrCount>
@@ -147,15 +147,26 @@
     <ArmDriver>
         <EnableCache>1</EnableCache>
     </ArmDriver>
-    <TermIOLog>
-        <LoggingEnabled>_ 0</LoggingEnabled>
-        <LogFile>_ ""</LogFile>
-    </TermIOLog>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Count>0</Count>
+    </Breakpoints2>
     <LogFile>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
         <Category>_ 0</Category>
     </LogFile>
+    <Aliases>
+        <A0>_ "C:\Vector\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\Appl\BrsAsrMain.c" ""</A0>
+        <A1>_ "C:\Vector\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\Appl\GenData\Os_Hal_EntryAsm_Lcfg.asm" ""</A1>
+        <A2>_ "C:\Vector\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\BSW\EcuM\EcuM.c" ""</A2>
+        <A3>_ "C:\Vector\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\Device\startup.c" ""</A3>
+        <A4>_ "C:\Vector\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\Device\system_S32K148.c" "C:\Users\yongy\Desktop\aaa\zhuqiang655.github.io\S32K144_Start_new_IAR\Device\system_S32K148.c"</A4>
+        <Count>5</Count>
+        <SuppressDialog>0</SuppressDialog>
+    </Aliases>
     <DriverProfiling>
         <Enabled>0</Enabled>
         <Mode>1</Mode>
@@ -168,19 +179,8 @@
     <CallStackStripe>
         <ShowTiming>1</ShowTiming>
     </CallStackStripe>
-    <DisassembleMode>
-        <mode>0</mode>
-    </DisassembleMode>
-    <Breakpoints2>
-        <Count>0</Count>
-    </Breakpoints2>
-    <Aliases>
-        <A0>_ "C:\Vector\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\Appl\BrsAsrMain.c" ""</A0>
-        <A1>_ "C:\Vector\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\Appl\GenData\Os_Hal_EntryAsm_Lcfg.asm" ""</A1>
-        <A2>_ "C:\Vector\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\BSW\EcuM\EcuM.c" ""</A2>
-        <A3>_ "C:\Vector\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\Device\startup.c" ""</A3>
-        <A4>_ "C:\Vector\CBD1800257_D01_S32K1xx\Applications\S32K144_Start_new_IAR\Device\system_S32K148.c" ""</A4>
-        <Count>5</Count>
-        <SuppressDialog>0</SuppressDialog>
-    </Aliases>
+    <TermIOLog>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+    </TermIOLog>
 </settings>

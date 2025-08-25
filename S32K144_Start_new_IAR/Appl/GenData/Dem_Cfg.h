@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Cfg.h
- *   Generation Time: 2021-06-21 14:32:33
+ *   Generation Time: 2025-08-26 01:00:56
  *           Project: S32K144_Start - Version 1.0
  *          Delivery: CBD1800257_D01
  *      Tool Version: DaVinci Configurator  5.18.37 SP1
@@ -157,7 +157,7 @@
 #define DEM_CFG_DATA_ROOTCAUSE_EVENTID                                     STD_OFF      /* Autodetected - STD_ON: any /Dem/DemGeneral/DemDataClass/DemDataElementInternalData == DEM_ROOTCAUSE_EVENTID exists, STD_OFF: else */ 
 #define DEM_CFG_DATA_SIGNIFICANCE                                          STD_OFF      /* Autodetected - STD_ON: any /Dem/DemGeneral/DemDataClass/DemDataElementInternalData == DEM_SIGNIFICANCE exists, STD_OFF: else */ 
 #define DEM_CFG_DATA_UNCONFIRMED_CYCLES                                    STD_OFF      /* Autodetected - STD_ON: any /Dem/DemGeneral/DemDataClass/DemDataElementInternalData == DEM_UNCONFIRMED_CYCLES exists, STD_OFF: else */ 
-#define DEM_CFG_DISPLACEMENT_FALLBACK_OLDEST                               STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemEventDisplacementFallbackStrategy == DEM_FALLBACK_DISPLACE_OLDEST_EVENT */ 
+#define DEM_CFG_DISPLACEMENT_FALLBACK_OLDEST                               STD_ON       /* Autodetected - via /Dem/DemGeneral/DemEventDisplacementFallbackStrategy == DEM_FALLBACK_DISPLACE_OLDEST_EVENT */ 
 #define DEM_CFG_DISPLACEMENT_PREFER_PASSIVE                                STD_ON       /* Autodetected - via /Dem/DemGeneral/DemEventDisplacementStrategy == (DEM_DISPLACEMENT_FULL | DEM_DISPLACEMENT_LEGACY_403) */ 
 #define DEM_CFG_DISPLACEMENT_TNCTOC_IS_PASSIVE                             STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemEventDisplacementStrategy == DEM_DISPLACEMENT_FULL */ 
 #define DEM_CFG_HAS_J1939_NODE                                             STD_OFF      /* (DEM_CFG_SUPPORT_J1939 == STD_OFF) */ 
@@ -224,7 +224,7 @@
 #define DEM_CFG_SUPPORT_DISABLED_COMBINATION                               STD_ON       /* Autodetected - via /Dem/DemGeneral/DemEventCombinationSupport == DEM_EVCOMB_DISABLED */ 
 #define DEM_CFG_SUPPORT_DISPLACEMENT                                       STD_ON       /* Autodetected - via /Dem/DemGeneral/DemEventDisplacementStrategy == (DEM_DISPLACEMENT_PRIO_OCC | DEM_DISPLACEMENT_FULL | DEM_DISPLACEMENT_LEGACY_403) */ 
 #define DEM_CFG_SUPPORT_DLT                                                STD_OFF      /* Feature not supported. */ 
-#define DEM_CFG_SUPPORT_DTCSUPPRESSION                                     STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemSuppressionSupport == (DEM_DTC_SUPPRESSION | DEM_EVENT_AND_DTC_SUPPRESSION) */ 
+#define DEM_CFG_SUPPORT_DTCSUPPRESSION                                     STD_ON       /* Autodetected - via /Dem/DemGeneral/DemSuppressionSupport == (DEM_DTC_SUPPRESSION | DEM_EVENT_AND_DTC_SUPPRESSION) */ 
 #define DEM_CFG_SUPPORT_DTR                                                STD_OFF      /* ((DEM_CFG_SUPPORT_OBDII == STD_OFF) && (DEM_CFG_SUPPORT_WWHOBD == STD_OFF)) */ 
 #define DEM_CFG_SUPPORT_ENABLE_CONDITIONS                                  STD_OFF      /* /Dem/DemGeneral/DemEnableConditionSupport */ 
 #define DEM_CFG_SUPPORT_ERECS                                              STD_ON       /* Internal - STD_ON: any DTC has ExtendedDataRecord(s), STD_OFF: no DTC has ExtendedDataRecords */ 
@@ -288,8 +288,8 @@
 #define DEM_CFG_SUPPORT_SECONDARY                                          STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemMaxNumberEventEntrySecondary > 0 */ 
 #define DEM_CFG_SUPPORT_SIMILAR_CONDITIONS                                 STD_OFF      /* ((DEM_CFG_SUPPORT_OBDII == STD_OFF) && (DEM_CFG_SUPPORT_WWHOBD == STD_OFF)) */ 
 #define DEM_CFG_SUPPORT_SRECS                                              STD_OFF      /* Internal - STD_ON: any EventParameter references FreezeFrame(s), STD_OFF: no EventParameter references FreezeFrames */ 
-#define DEM_CFG_SUPPORT_SRECS_CALCULATED                                   STD_ON       /* Autodetected - via /Dem/DemGeneral/DemTypeOfFreezeFrameRecordNumeration == DEM_FF_RECNUM_CALCULATED */ 
-#define DEM_CFG_SUPPORT_SRECS_CONFIGURED                                   STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemTypeOfFreezeFrameRecordNumeration == DEM_FF_RECNUM_CONFIGURED */ 
+#define DEM_CFG_SUPPORT_SRECS_CALCULATED                                   STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemTypeOfFreezeFrameRecordNumeration == DEM_FF_RECNUM_CALCULATED */ 
+#define DEM_CFG_SUPPORT_SRECS_CONFIGURED                                   STD_ON       /* Autodetected - via /Dem/DemGeneral/DemTypeOfFreezeFrameRecordNumeration == DEM_FF_RECNUM_CONFIGURED */ 
 #define DEM_CFG_SUPPORT_STORAGE_CONDITIONS                                 STD_OFF      /* /Dem/DemGeneral/DemStorageConditionSupport */ 
 #define DEM_CFG_SUPPORT_TESTFAILED_STORAGE                                 STD_ON       /* /Dem/DemGeneral/DemStatusBitStorageTestFailed */ 
 #define DEM_CFG_SUPPORT_TIME_SERIES_FUTURE_FAST                            STD_OFF      /* Autodetected - STD_ON: (/Dem/DemGeneral/DemMaxNumberTimeSeriesSnapshots > 0) && (/Dem/DemGeneral/DemTimeSeriesSnapshot/DemTimeSeriesFastRateFutureSamples > 0) && (PostBuild-Loadable || any event has DemEventTimeSeries==FAST_RATE), STD_OFF: else. */ 
@@ -304,7 +304,7 @@
 #define DEM_CFG_SUPPORT_USER_CONTROLLED_WIR_DURING_CDTCS                   STD_ON       /* Autodetected - via /Dem/DemGeneral/DemUserControlledWirBehavior == DEM_ENABLED_DURING_CONTROLDTCSETTING */ 
 #define DEM_CFG_SUPPORT_USER_ERECS                                         STD_ON       /* Internal - STD_ON: require generic buffer ExtendedData[], STD_OFF: all configured DemDataClass of DemExtendedDataRecordClass have individual buffers in Dem_Cfg_PrimaryEntryType */ 
 #define DEM_CFG_SUPPORT_USER_INDICATORS                                    STD_OFF      /* Autodetected - STD_ON: any event has a user (non-special) indicator, STD_OFF: no event has standard user indicator (but some events may have a special indicators like MIL or any J1939 Lamp) */ 
-#define DEM_CFG_SUPPORT_VERSION_INFO                                       STD_ON       /* /Dem/DemGeneral/DemVersionInfoApi */ 
+#define DEM_CFG_SUPPORT_VERSION_INFO                                       STD_OFF      /* /Dem/DemGeneral/DemVersionInfoApi */ 
 #define DEM_CFG_SUPPORT_VID08                                              STD_OFF      /* (DEM_CFG_SUPPORT_OBDII == STD_OFF) */ 
 #define DEM_CFG_SUPPORT_VID0B                                              STD_OFF      /* (DEM_CFG_SUPPORT_OBDII == STD_OFF) */ 
 #define DEM_CFG_SUPPORT_WWHOBD                                             STD_OFF      /* Feature not licensed. */ 

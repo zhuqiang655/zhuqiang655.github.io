@@ -93,6 +93,26 @@
               <RUNNABLES>
                 <RUNNABLE-ENTITY UUID="B9998598-5EBB-49CA-BCDD-2A76FC2B123E">
                   <SHORT-NAME>LedRunnable</SHORT-NAME>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="88AC2D14-C6D3-457B-9B12-FF83CC118024">
+                      <SHORT-NAME>SEND_Brake_signal_u8sig</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/CtLedTask/Brake_signal</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/Brake_signal/u8sig</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="50117067-9841-4B29-948F-C883F553696A">
+                      <SHORT-NAME>SEND_Drive_Standy_u8sig</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/CtLedTask/Drive_Standy</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/Drive_Standy/u8sig</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
                 </RUNNABLE-ENTITY>
                 <RUNNABLE-ENTITY UUID="3F577544-17EF-4D72-8258-98CA2DFB8B1E">
                   <SHORT-NAME>CtLedTask_InitRunnable</SHORT-NAME>

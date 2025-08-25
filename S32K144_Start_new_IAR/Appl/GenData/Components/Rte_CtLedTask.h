@@ -54,7 +54,27 @@ extern "C"
 # endif
 
 
+# define RTE_START_SEC_CODE
+# include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_19.1 */
+
+/**********************************************************************************************************************
+ * API prototypes
+ *********************************************************************************************************************/
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtLedTask_Brake_signal_u8sig(uint8 data); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtLedTask_Drive_Standy_u8sig(uint16 data); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+
+# define RTE_STOP_SEC_CODE
+# include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_19.1 */
+
+
 # ifndef RTE_CORE
+
+/**********************************************************************************************************************
+ * Rte_Write_<p>_<d> (explicit S/R communication with isQueued = false)
+ *********************************************************************************************************************/
+#  define Rte_Write_Brake_signal_u8sig Rte_Write_CtLedTask_Brake_signal_u8sig
+#  define Rte_Write_Drive_Standy_u8sig Rte_Write_CtLedTask_Drive_Standy_u8sig
+
 
 /**********************************************************************************************************************
  * Rte_Call_<p>_<o> (unmapped) for synchronous C/S communication

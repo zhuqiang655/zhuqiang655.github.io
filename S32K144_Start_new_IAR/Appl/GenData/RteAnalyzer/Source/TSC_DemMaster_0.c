@@ -577,6 +577,60 @@ Std_ReturnType TSC_DemMaster_0_Rte_Call_CBReadData_OdometerValue_OdometerValue_R
 
 
 
+
+
+
+
+
+
+     /* Client Server Interfaces: */
+
+
+     /* Service calls */
+
+
+     /* Mode Interfaces */
+
+
+
+
+     /* Trigger Interfaces */
+
+     /* Inter-Runnable variables */
+
+
+
+
+
+
+
+
+
+
+
+
+
+     /* Client Server Interfaces: */
+
+
+     /* Service calls */
+
+
+     /* Mode Interfaces */
+
+
+
+
+     /* Trigger Interfaces */
+
+     /* Inter-Runnable variables */
+
+
+
+
+
+
+
      /* DemMaster_0 */
       /* DemMaster_0 */
 

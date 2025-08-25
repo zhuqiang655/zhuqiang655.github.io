@@ -254,6 +254,29 @@ FUNC(void, RTE_CODE) Rte_InitMemory(void) /* PRQA S 0850 */ /* MD_MSR_19.8 */
 
 
 /**********************************************************************************************************************
+ * Internal/External Tx connections
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtLedTask_Brake_signal_u8sig(uint8 data) /* PRQA S 0850, 1505 */ /* MD_MSR_19.8, MD_MSR_8.10 */
+{
+  Std_ReturnType ret = RTE_E_OK;
+
+  ret |= Com_SendSignal(ComConf_ComSignal_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx, (&data)); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtLedTask_Drive_Standy_u8sig(uint16 data) /* PRQA S 0850, 1505 */ /* MD_MSR_19.8, MD_MSR_8.10 */
+{
+  Std_ReturnType ret = RTE_E_OK;
+
+  ret |= Com_SendSignal(ComConf_ComSignal_Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx, (&data)); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+
+/**********************************************************************************************************************
  * Internal/External Rx connections
  *********************************************************************************************************************/
 

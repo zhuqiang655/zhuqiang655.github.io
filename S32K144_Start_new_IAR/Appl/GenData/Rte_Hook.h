@@ -116,6 +116,8 @@
  *  Rte_Runnable_DemMaster_0_GetDTCOfEvent_Start
  *  Rte_Runnable_DemMaster_0_GetDTCStatusAvailabilityMask_Return
  *  Rte_Runnable_DemMaster_0_GetDTCStatusAvailabilityMask_Start
+ *  Rte_Runnable_DemMaster_0_GetDTCSuppression_Return
+ *  Rte_Runnable_DemMaster_0_GetDTCSuppression_Start
  *  Rte_Runnable_DemMaster_0_GetDebouncingOfEvent_Return
  *  Rte_Runnable_DemMaster_0_GetDebouncingOfEvent_Start
  *  Rte_Runnable_DemMaster_0_GetEventEnableCondition_Return
@@ -146,6 +148,8 @@
  *  Rte_Runnable_DemMaster_0_PostRunRequested_Start
  *  Rte_Runnable_DemMaster_0_SelectDTC_Return
  *  Rte_Runnable_DemMaster_0_SelectDTC_Start
+ *  Rte_Runnable_DemMaster_0_SetDTCSuppression_Return
+ *  Rte_Runnable_DemMaster_0_SetDTCSuppression_Start
  *  Rte_Runnable_DemMaster_0_SetOperationCycleState_Return
  *  Rte_Runnable_DemMaster_0_SetOperationCycleState_Start
  *  Rte_Runnable_DemSatellite_0_Dem_SatelliteMainFunction_Return
@@ -216,6 +220,10 @@
  *  Rte_Task_Dispatch
  *  Rte_Task_WaitEvent
  *  Rte_Task_WaitEventRet
+ *  Rte_WriteHook_CtLedTask_Brake_signal_u8sig_Return
+ *  Rte_WriteHook_CtLedTask_Brake_signal_u8sig_Start
+ *  Rte_WriteHook_CtLedTask_Drive_Standy_u8sig_Return
+ *  Rte_WriteHook_CtLedTask_Drive_Standy_u8sig_Start
  *  SchM_EnterHook_BswM_BSWM_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_BswM_BSWM_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_CanIf_CANIF_EXCLUSIVE_AREA_0_Return

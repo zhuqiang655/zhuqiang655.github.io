@@ -20,6 +20,10 @@
  *********************************************************************************************************************/
 
 
+/** Sender receiver - explicit write services */
+Std_ReturnType TSC_CtLedTask_Rte_Write_Brake_signal_u8sig(uint8 data);
+Std_ReturnType TSC_CtLedTask_Rte_Write_Drive_Standy_u8sig(uint16 data);
+
 /** Service interfaces */
 Std_ReturnType TSC_CtLedTask_Rte_Call_UR_CN_CAN00_06ecbb07_GetCurrentComMode(ComM_ModeType *ComMode);
 Std_ReturnType TSC_CtLedTask_Rte_Call_UR_CN_CAN00_06ecbb07_GetMaxComMode(ComM_ModeType *ComMode);

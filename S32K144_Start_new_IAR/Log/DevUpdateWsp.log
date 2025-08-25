@@ -1,23 +1,26 @@
-﻿09 Apr 2021 14:05:15 - Opening workspace 'C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\Developer\S32K144_Start.dcf'...
-09 Apr 2021 14:05:18 - Loading file PlatformTypes_AR4.arxml (C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\AUTOSAR\PlatformTypes_AR4.arxml)
-09 Apr 2021 14:05:18 - Loading file BswM_swc.arxml (C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\ServiceComponents\BswM_swc.arxml)
-09 Apr 2021 14:05:18 - Loading file ComM_swc.arxml (C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\ServiceComponents\ComM_swc.arxml)
-09 Apr 2021 14:05:18 - Loading file Dem_swc.arxml (C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\ServiceComponents\Dem_swc.arxml)
-09 Apr 2021 14:05:18 - Loading file Det_swc.arxml (C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\ServiceComponents\Det_swc.arxml)
-09 Apr 2021 14:05:18 - Loading file EcuM_swc.arxml (C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\ServiceComponents\EcuM_swc.arxml)
-09 Apr 2021 14:05:18 - Loading file Os_swc.arxml (C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\ServiceComponents\Os_swc.arxml)
-09 Apr 2021 14:05:18 - Loading file Communication.arxml (C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Update\DevData\Communication.arxml)
-09 Apr 2021 14:05:18 - Loading file DataTypes.arxml (C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\Developer\DataTypes.arxml)
-09 Apr 2021 14:05:18 - Loading file Packages.arxml (C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\Developer\Packages.arxml)
-09 Apr 2021 14:05:18 - Loading file PortInterfaces.arxml (C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\Developer\PortInterfaces.arxml)
-09 Apr 2021 14:05:18 - Loading file S32K144_Start.arxml (C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\Developer\S32K144_Start.arxml)
-09 Apr 2021 14:05:19 - Opened workspace 'C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\Developer\S32K144_Start.dcf' successfully.
-09 Apr 2021 14:05:20 - Start import
-09 Apr 2021 14:05:20 - Importing file (C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\System\SystemExtract.arxml).
-09 Apr 2021 14:05:20 - Merging imported data
-09 Apr 2021 14:05:21 - Finished import
-09 Apr 2021 14:05:21 - Saving workspace 'C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\Developer\S32K144_Start.dcf'...
-09 Apr 2021 14:05:21 - Saving file DataTypes.arxml (C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\Developer\DataTypes.arxml)
-09 Apr 2021 14:05:21 - Saved workspace 'C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\Developer\S32K144_Start.dcf' successfully.
-09 Apr 2021 14:05:21 - Closing workspace 'C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\Developer\S32K144_Start.dcf'...
-09 Apr 2021 14:05:21 - Closed workspace 'C:\Users\Fengyuan\AppData\Local\Temp\DaVinci\Cfg-9342797\Workflow\1617948280736-0\Config\Developer\S32K144_Start.dcf' successfully.
+﻿26 Aug 2025 00:29:04 - Opening workspace 'C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\Developer\S32K144_Start.dcf'...
+26 Aug 2025 00:29:06 - Loading file PlatformTypes_AR4.arxml (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\AUTOSAR\PlatformTypes_AR4.arxml)
+26 Aug 2025 00:29:06 - Loading file BswM_swc.arxml (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\ServiceComponents\BswM_swc.arxml)
+26 Aug 2025 00:29:06 - Loading file ComM_swc.arxml (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\ServiceComponents\ComM_swc.arxml)
+26 Aug 2025 00:29:06 - Loading file Dcm_swc.arxml (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\ServiceComponents\Dcm_swc.arxml)
+26 Aug 2025 00:29:06 - Loading file Dem_swc.arxml (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\ServiceComponents\Dem_swc.arxml)
+26 Aug 2025 00:29:06 - Loading file Det_swc.arxml (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\ServiceComponents\Det_swc.arxml)
+26 Aug 2025 00:29:06 - Loading file EcuM_swc.arxml (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\ServiceComponents\EcuM_swc.arxml)
+26 Aug 2025 00:29:06 - Loading file Os_swc.arxml (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\ServiceComponents\Os_swc.arxml)
+26 Aug 2025 00:29:06 - Loading file Communication.arxml (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Update\DevData\Communication.arxml)
+26 Aug 2025 00:29:06 - Loading file CddSbc.arxml (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\Developer\CddSbc.arxml)
+26 Aug 2025 00:29:06 - Loading file CtLedTask.arxml (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\Developer\CtLedTask.arxml)
+26 Aug 2025 00:29:06 - Loading file DataTypes.arxml (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\Developer\DataTypes.arxml)
+26 Aug 2025 00:29:06 - Loading file Packages.arxml (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\Developer\Packages.arxml)
+26 Aug 2025 00:29:06 - Loading file PortInterfaces.arxml (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\Developer\PortInterfaces.arxml)
+26 Aug 2025 00:29:06 - Loading file S32K144_Start.arxml (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\Developer\S32K144_Start.arxml)
+26 Aug 2025 00:29:07 - Opened workspace 'C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\Developer\S32K144_Start.dcf' successfully.
+26 Aug 2025 00:29:08 - Start import
+26 Aug 2025 00:29:08 - Importing file (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\System\SystemExtract.arxml).
+26 Aug 2025 00:29:08 - Merging imported data
+26 Aug 2025 00:29:08 - Finished import
+26 Aug 2025 00:29:08 - Saving workspace 'C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\Developer\S32K144_Start.dcf'...
+26 Aug 2025 00:29:09 - Saving file DataTypes.arxml (C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\Developer\DataTypes.arxml)
+26 Aug 2025 00:29:09 - Saved workspace 'C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\Developer\S32K144_Start.dcf' successfully.
+26 Aug 2025 00:29:09 - Closing workspace 'C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\Developer\S32K144_Start.dcf'...
+26 Aug 2025 00:29:09 - Closed workspace 'C:\Users\yongy\AppData\Local\Temp\DaVinci\Cfg-8312584\Workflow\1756139320665-0\Config\Developer\S32K144_Start.dcf' successfully.

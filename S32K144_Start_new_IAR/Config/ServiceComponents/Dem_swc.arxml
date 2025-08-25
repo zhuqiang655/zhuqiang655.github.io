@@ -4129,70 +4129,6 @@
                     </APPLICATION-ERROR>
                   </POSSIBLE-ERRORS>
                 </CLIENT-SERVER-INTERFACE>
-                <CLIENT-SERVER-INTERFACE UUID="879b5c05-ef21-4481-ae94-8153756f70c1">
-                  <SHORT-NAME>CSDataServices_OccurrenceCounter_OccurenceCounter</SHORT-NAME>
-                  <IS-SERVICE>true</IS-SERVICE>
-                  <SERVICE-KIND>DIAGNOSTIC-EVENT-MANAGER</SERVICE-KIND>
-                  <OPERATIONS>
-                    <CLIENT-SERVER-OPERATION UUID="54a616ff-6ea6-48e0-bf69-ab92b7124c46">
-                      <SHORT-NAME>ReadData</SHORT-NAME>
-                      <DESC>
-                        <L-2 L="FOR-ALL"/>
-                      </DESC>
-                      <ARGUMENTS>
-                        <ARGUMENT-DATA-PROTOTYPE UUID="5cb81d78-cdac-4614-9b49-090dc87f3c8b">
-                          <SHORT-NAME>Data</SHORT-NAME>
-                          <DESC>
-                            <L-2 L="FOR-ALL"/>
-                          </DESC>
-                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dem_swc/DataTypes/DataArrayType_uint8_4</TYPE-TREF>
-                          <DIRECTION>OUT</DIRECTION>
-                        </ARGUMENT-DATA-PROTOTYPE>
-                      </ARGUMENTS>
-                      <POSSIBLE-ERROR-REFS>
-                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dem_swc/Interfaces/CSDataServices_OccurrenceCounter_OccurenceCounter/E_NOT_OK</POSSIBLE-ERROR-REF>
-                      </POSSIBLE-ERROR-REFS>
-                    </CLIENT-SERVER-OPERATION>
-                  </OPERATIONS>
-                  <POSSIBLE-ERRORS>
-                    <APPLICATION-ERROR UUID="cc565df5-963c-48b0-985c-39921a7492ee">
-                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
-                      <ERROR-CODE>1</ERROR-CODE>
-                    </APPLICATION-ERROR>
-                  </POSSIBLE-ERRORS>
-                </CLIENT-SERVER-INTERFACE>
-                <CLIENT-SERVER-INTERFACE UUID="38cb8f9b-19ec-41ae-9220-26acbaa7007a">
-                  <SHORT-NAME>CSDataServices_OdometerValue_OdometerValue</SHORT-NAME>
-                  <IS-SERVICE>true</IS-SERVICE>
-                  <SERVICE-KIND>DIAGNOSTIC-EVENT-MANAGER</SERVICE-KIND>
-                  <OPERATIONS>
-                    <CLIENT-SERVER-OPERATION UUID="7d2da6a4-9739-4275-b5fc-5de2d60d7cea">
-                      <SHORT-NAME>ReadData</SHORT-NAME>
-                      <DESC>
-                        <L-2 L="FOR-ALL"/>
-                      </DESC>
-                      <ARGUMENTS>
-                        <ARGUMENT-DATA-PROTOTYPE UUID="85b6b6cf-20bc-4152-a524-8edee5d63e5a">
-                          <SHORT-NAME>Data</SHORT-NAME>
-                          <DESC>
-                            <L-2 L="FOR-ALL"/>
-                          </DESC>
-                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dem_swc/DataTypes/DataArrayType_uint8_4</TYPE-TREF>
-                          <DIRECTION>OUT</DIRECTION>
-                        </ARGUMENT-DATA-PROTOTYPE>
-                      </ARGUMENTS>
-                      <POSSIBLE-ERROR-REFS>
-                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dem_swc/Interfaces/CSDataServices_OdometerValue_OdometerValue/E_NOT_OK</POSSIBLE-ERROR-REF>
-                      </POSSIBLE-ERROR-REFS>
-                    </CLIENT-SERVER-OPERATION>
-                  </OPERATIONS>
-                  <POSSIBLE-ERRORS>
-                    <APPLICATION-ERROR UUID="f26cba47-cec0-497c-9671-93b1701ad9fc">
-                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
-                      <ERROR-CODE>1</ERROR-CODE>
-                    </APPLICATION-ERROR>
-                  </POSSIBLE-ERRORS>
-                </CLIENT-SERVER-INTERFACE>
                 <CLIENT-SERVER-INTERFACE UUID="2f8b9db2-5579-4fd2-8471-d04d88a97869">
                   <SHORT-NAME>DiagnosticInfo</SHORT-NAME>
                   <IS-SERVICE>true</IS-SERVICE>
@@ -4767,6 +4703,139 @@
                     </APPLICATION-ERROR>
                   </POSSIBLE-ERRORS>
                 </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="d2cddfdb-d652-4d67-8a2b-383d34e8f644">
+                  <SHORT-NAME>CSDataServices_OccurrenceCounter_OccurenceCounter</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>DIAGNOSTIC-EVENT-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="c8ca074b-fa51-4766-819f-226dc5e8796b">
+                      <SHORT-NAME>ReadData</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="0b459460-9470-4272-99b7-5c2498ab3176">
+                          <SHORT-NAME>Data</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dem_swc/DataTypes/DataArrayType_uint8_4</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dem_swc/Interfaces/CSDataServices_OccurrenceCounter_OccurenceCounter/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="854e50f1-9e6e-49fa-afef-199e98e6a52f">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="d0dd8781-4aa5-46e5-b622-12d683703c95">
+                  <SHORT-NAME>CSDataServices_OdometerValue_OdometerValue</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>DIAGNOSTIC-EVENT-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="a7789fa2-5249-4f60-8f0b-857864f6459c">
+                      <SHORT-NAME>ReadData</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="49a0f15a-b376-42d2-9e0d-dc2263c7c229">
+                          <SHORT-NAME>Data</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dem_swc/DataTypes/DataArrayType_uint8_4</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dem_swc/Interfaces/CSDataServices_OdometerValue_OdometerValue/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="d7a83dad-0f79-451d-8996-fe2b65f73820">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="15e24f42-1894-4991-a509-a1cf7cf267b1">
+                  <SHORT-NAME>DTCSuppression</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>DIAGNOSTIC-EVENT-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="4db4efb4-fa6a-435c-901e-98b9db57b6fe">
+                      <SHORT-NAME>SetDTCSuppression</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="1e363465-63ec-49bf-a926-a6f88141f348">
+                          <SHORT-NAME>SuppressionStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dem_swc/Interfaces/DTCSuppression/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dem_swc/Interfaces/DTCSuppression/DEM_WRONG_DTC</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dem_swc/Interfaces/DTCSuppression/DEM_WRONG_DTCORIGIN</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dem_swc/Interfaces/DTCSuppression/DEM_PENDING</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="48b53a6f-dbd8-4730-97bc-f0c163372cc1">
+                      <SHORT-NAME>GetDTCSuppression</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="76a516ce-6e1c-4f05-a003-7d9fe411a738">
+                          <SHORT-NAME>SuppressionStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dem_swc/Interfaces/DTCSuppression/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dem_swc/Interfaces/DTCSuppression/DEM_WRONG_DTC</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dem_swc/Interfaces/DTCSuppression/DEM_WRONG_DTCORIGIN</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dem_swc/Interfaces/DTCSuppression/DEM_PENDING</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="7e39aaff-c431-4b30-bf4d-a01ab816bc32">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                    <APPLICATION-ERROR UUID="46752ec4-1dff-4817-a0cd-26077c7dc4ac">
+                      <SHORT-NAME>DEM_WRONG_DTC</SHORT-NAME>
+                      <ERROR-CODE>8</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                    <APPLICATION-ERROR UUID="543552e1-9ec7-4d89-a47d-3ec84bc49780">
+                      <SHORT-NAME>DEM_WRONG_DTCORIGIN</SHORT-NAME>
+                      <ERROR-CODE>9</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                    <APPLICATION-ERROR UUID="742d24cb-fbcb-49be-b209-74793604cb70">
+                      <SHORT-NAME>DEM_PENDING</SHORT-NAME>
+                      <ERROR-CODE>4</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
               </ELEMENTS>
             </AR-PACKAGE>
             <AR-PACKAGE UUID="31a9b3ba-e895-4e1d-9280-550ca36c516e">
@@ -4792,7 +4861,15 @@
                       <SHORT-NAME>OpCycle_PowerCycle</SHORT-NAME>
                       <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/OperationCycle</PROVIDED-INTERFACE-TREF>
                     </P-PORT-PROTOTYPE>
-                    <R-PORT-PROTOTYPE UUID="3e916bd3-9d31-42c0-bfc1-fdda7ff56e82">
+                    <P-PORT-PROTOTYPE UUID="d3c9a54f-f7c4-4aa4-b930-5c95d14dd106">
+                      <SHORT-NAME>ClearDTC_DemClient</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/ClearDTC</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="983f7675-44b4-4991-a999-0753b9b6202c">
+                      <SHORT-NAME>OverflowIndPrimaryMemory_DemClient</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/EvMemOverflowIndication</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="1856ad7a-b7be-4353-8491-453550cb5208">
                       <SHORT-NAME>CBReadData_OccurrenceCounter_OccurenceCounter</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -4806,7 +4883,7 @@
                       </ADMIN-DATA>
                       <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/CSDataServices_OccurrenceCounter_OccurenceCounter</REQUIRED-INTERFACE-TREF>
                     </R-PORT-PROTOTYPE>
-                    <R-PORT-PROTOTYPE UUID="85979dd8-f419-43ee-85ff-8ede78d9c546">
+                    <R-PORT-PROTOTYPE UUID="db1ac306-7a62-48c7-9a84-6aa5a27194d8">
                       <SHORT-NAME>CBReadData_OdometerValue_OdometerValue</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -4820,13 +4897,9 @@
                       </ADMIN-DATA>
                       <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/CSDataServices_OdometerValue_OdometerValue</REQUIRED-INTERFACE-TREF>
                     </R-PORT-PROTOTYPE>
-                    <P-PORT-PROTOTYPE UUID="bb9520ae-88be-40f1-8b1c-9709300d1a7e">
-                      <SHORT-NAME>ClearDTC_DemClient</SHORT-NAME>
-                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/ClearDTC</PROVIDED-INTERFACE-TREF>
-                    </P-PORT-PROTOTYPE>
-                    <P-PORT-PROTOTYPE UUID="e9edad90-7a5d-4d4f-8bbe-50144cc1e93f">
-                      <SHORT-NAME>OverflowIndPrimaryMemory_DemClient</SHORT-NAME>
-                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/EvMemOverflowIndication</PROVIDED-INTERFACE-TREF>
+                    <P-PORT-PROTOTYPE UUID="58e1b80f-9e30-48e4-b810-6f92cb20cd08">
+                      <SHORT-NAME>ControlDTCSuppression_DemClient</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/DTCSuppression</PROVIDED-INTERFACE-TREF>
                     </P-PORT-PROTOTYPE>
                   </PORTS>
                   <INTERNAL-BEHAVIORS>
@@ -4974,7 +5047,7 @@
                             <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/OperationCycle/SetOperationCycleState</TARGET-PROVIDED-OPERATION-REF>
                           </OPERATION-IREF>
                         </OPERATION-INVOKED-EVENT>
-                        <OPERATION-INVOKED-EVENT UUID="4c78e9ac-8acc-4b2d-83f1-82d369117a9c">
+                        <OPERATION-INVOKED-EVENT UUID="15362188-dc2b-4a14-8c21-865ec8d1115c">
                           <SHORT-NAME>OpEventClearDTC_ClearDTC_ClearDTC_DemClient</SHORT-NAME>
                           <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/DemMaster_0InternalBehavior/ClearDTC</START-ON-EVENT-REF>
                           <OPERATION-IREF>
@@ -4982,7 +5055,7 @@
                             <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/ClearDTC/ClearDTC</TARGET-PROVIDED-OPERATION-REF>
                           </OPERATION-IREF>
                         </OPERATION-INVOKED-EVENT>
-                        <OPERATION-INVOKED-EVENT UUID="087bb384-3990-46cb-9996-7a9c78e91e3e">
+                        <OPERATION-INVOKED-EVENT UUID="118d4542-6939-41f4-a273-b067c1e06668">
                           <SHORT-NAME>OpEventSelectDTC_SelectDTC_ClearDTC_DemClient</SHORT-NAME>
                           <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/DemMaster_0InternalBehavior/SelectDTC</START-ON-EVENT-REF>
                           <OPERATION-IREF>
@@ -4990,7 +5063,7 @@
                             <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/ClearDTC/SelectDTC</TARGET-PROVIDED-OPERATION-REF>
                           </OPERATION-IREF>
                         </OPERATION-INVOKED-EVENT>
-                        <OPERATION-INVOKED-EVENT UUID="916b36b0-663c-4068-9f0a-380b729e6979">
+                        <OPERATION-INVOKED-EVENT UUID="33bae594-41e9-44e3-b589-d7681abfe357">
                           <SHORT-NAME>OpEventGetEventMemoryOverflow_GetEventMemoryOverflow_OverflowIndPrimaryMemory_DemClient</SHORT-NAME>
                           <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/DemMaster_0InternalBehavior/GetEventMemoryOverflow</START-ON-EVENT-REF>
                           <OPERATION-IREF>
@@ -4998,12 +5071,28 @@
                             <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/EvMemOverflowIndication/GetEventMemoryOverflow</TARGET-PROVIDED-OPERATION-REF>
                           </OPERATION-IREF>
                         </OPERATION-INVOKED-EVENT>
-                        <OPERATION-INVOKED-EVENT UUID="0d8c003e-9893-41d9-909f-837bd0482e69">
+                        <OPERATION-INVOKED-EVENT UUID="dfc5869d-d0a5-4079-9817-ccb496ded4cc">
                           <SHORT-NAME>OpEventGetNumberOfEventMemoryEntries_GetNumberOfEventMemoryEntries_OverflowIndPrimaryMemory_DemClient</SHORT-NAME>
                           <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/DemMaster_0InternalBehavior/GetNumberOfEventMemoryEntries</START-ON-EVENT-REF>
                           <OPERATION-IREF>
                             <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/OverflowIndPrimaryMemory_DemClient</CONTEXT-P-PORT-REF>
                             <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/EvMemOverflowIndication/GetNumberOfEventMemoryEntries</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="ada0cd10-5814-477b-913a-6536b11b45b0">
+                          <SHORT-NAME>OpEventSetDTCSuppression_SetDTCSuppression_ControlDTCSuppression_DemClient</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/DemMaster_0InternalBehavior/SetDTCSuppression</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/ControlDTCSuppression_DemClient</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/DTCSuppression/SetDTCSuppression</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="89a15fc9-dc6c-45ff-a453-c1078abca6df">
+                          <SHORT-NAME>OpEventGetDTCSuppression_GetDTCSuppression_ControlDTCSuppression_DemClient</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/DemMaster_0InternalBehavior/GetDTCSuppression</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/ControlDTCSuppression_DemClient</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/DTCSuppression/GetDTCSuppression</TARGET-PROVIDED-OPERATION-REF>
                           </OPERATION-IREF>
                         </OPERATION-INVOKED-EVENT>
                       </EVENTS>
@@ -5078,16 +5167,6 @@
                         <PORT-API-OPTION>
                           <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
                           <INDIRECT-API>false</INDIRECT-API>
-                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/CBReadData_OccurrenceCounter_OccurenceCounter</PORT-REF>
-                        </PORT-API-OPTION>
-                        <PORT-API-OPTION>
-                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
-                          <INDIRECT-API>false</INDIRECT-API>
-                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/CBReadData_OdometerValue_OdometerValue</PORT-REF>
-                        </PORT-API-OPTION>
-                        <PORT-API-OPTION>
-                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
-                          <INDIRECT-API>false</INDIRECT-API>
                           <PORT-ARG-VALUES>
                             <PORT-DEFINED-ARGUMENT-VALUE>
                               <VALUE>
@@ -5123,6 +5202,31 @@
                           </PORT-ARG-VALUES>
                           <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/OverflowIndPrimaryMemory_DemClient</PORT-REF>
                         </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/CBReadData_OccurrenceCounter_OccurenceCounter</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/CBReadData_OdometerValue_OdometerValue</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <VALUE>0</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/ControlDTCSuppression_DemClient</PORT-REF>
+                        </PORT-API-OPTION>
                       </PORT-API-OPTIONS>
                       <RUNNABLES>
                         <RUNNABLE-ENTITY UUID="f8dd691f-bdf9-4964-8935-b9b3c415ca7a">
@@ -5130,7 +5234,7 @@
                           <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
                           <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
                           <SERVER-CALL-POINTS>
-                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="ec9e27a3-6ed8-4e59-88bb-31f5a4f9602b">
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="6c15e0a6-52a0-4dd2-a3e6-20d48b8559ec">
                               <SHORT-NAME>OpServerCallDem_MasterMainFunction_ReadData_CBReadData_OccurrenceCounter_OccurenceCounter</SHORT-NAME>
                               <OPERATION-IREF>
                                 <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/CBReadData_OccurrenceCounter_OccurenceCounter</CONTEXT-R-PORT-REF>
@@ -5138,7 +5242,7 @@
                               </OPERATION-IREF>
                               <TIMEOUT>0</TIMEOUT>
                             </SYNCHRONOUS-SERVER-CALL-POINT>
-                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="506cdce3-4525-48c7-a05c-cce62ae7c250">
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="8e9cf73f-f25b-445a-b174-0a54bb51868b">
                               <SHORT-NAME>OpServerCallDem_MasterMainFunction_ReadData_CBReadData_OdometerValue_OdometerValue</SHORT-NAME>
                               <OPERATION-IREF>
                                 <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/CBReadData_OdometerValue_OdometerValue</CONTEXT-R-PORT-REF>
@@ -5239,29 +5343,41 @@
                           <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
                           <SYMBOL>Dem_SetOperationCycleState</SYMBOL>
                         </RUNNABLE-ENTITY>
-                        <RUNNABLE-ENTITY UUID="2c4c808f-9092-4456-b5fa-e3fc37355757">
+                        <RUNNABLE-ENTITY UUID="5c462e97-2541-42c3-9407-bee9bc509390">
                           <SHORT-NAME>ClearDTC</SHORT-NAME>
                           <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
                           <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
                           <SYMBOL>Dem_ClearDTC</SYMBOL>
                         </RUNNABLE-ENTITY>
-                        <RUNNABLE-ENTITY UUID="08052f58-cf19-4bd1-91fe-30eb8000c9dc">
+                        <RUNNABLE-ENTITY UUID="7eb997d6-70b6-4931-9f6c-ea1c777eb88f">
                           <SHORT-NAME>SelectDTC</SHORT-NAME>
                           <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
                           <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
                           <SYMBOL>Dem_SelectDTC</SYMBOL>
                         </RUNNABLE-ENTITY>
-                        <RUNNABLE-ENTITY UUID="f3c9041c-58cf-44e3-bbf8-bfff364aac71">
+                        <RUNNABLE-ENTITY UUID="f405319b-0942-4044-b9f6-278581d056a6">
                           <SHORT-NAME>GetEventMemoryOverflow</SHORT-NAME>
                           <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
                           <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
                           <SYMBOL>Dem_GetEventMemoryOverflow</SYMBOL>
                         </RUNNABLE-ENTITY>
-                        <RUNNABLE-ENTITY UUID="5e10e72c-02e4-4359-8ed8-a4660d4060a2">
+                        <RUNNABLE-ENTITY UUID="532c1ecd-0e98-4c02-a14c-74d525966539">
                           <SHORT-NAME>GetNumberOfEventMemoryEntries</SHORT-NAME>
                           <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
                           <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
                           <SYMBOL>Dem_GetNumberOfEventMemoryEntries</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="e2f4d1fb-84a8-4ffd-83e5-daa074ed847c">
+                          <SHORT-NAME>SetDTCSuppression</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Dem_SetDTCSuppression</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="81ac350c-c5b1-4fc7-bd4f-e459affb1542">
+                          <SHORT-NAME>GetDTCSuppression</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Dem_GetDTCSuppression</SYMBOL>
                         </RUNNABLE-ENTITY>
                       </RUNNABLES>
                       <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
@@ -5309,7 +5425,7 @@
                       <SHORT-NAME>GeneralEvtInfo</SHORT-NAME>
                       <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/GeneralDiagnosticInfo</PROVIDED-INTERFACE-TREF>
                     </P-PORT-PROTOTYPE>
-                    <R-PORT-PROTOTYPE UUID="8b05dd86-7e83-4cc4-8404-2cccfe2a4625">
+                    <R-PORT-PROTOTYPE UUID="f4691f5d-c9a2-4f15-83b7-f97e456f42eb">
                       <SHORT-NAME>CBReadData_OccurrenceCounter_OccurenceCounter</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -5323,7 +5439,7 @@
                       </ADMIN-DATA>
                       <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/CSDataServices_OccurrenceCounter_OccurenceCounter</REQUIRED-INTERFACE-TREF>
                     </R-PORT-PROTOTYPE>
-                    <R-PORT-PROTOTYPE UUID="6c9e833b-8b0d-4317-b3f3-74cbb1f6fc14">
+                    <R-PORT-PROTOTYPE UUID="766202dc-26e1-4b57-b611-d5e1acfb5957">
                       <SHORT-NAME>CBReadData_OdometerValue_OdometerValue</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -5692,7 +5808,7 @@
                           <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
                           <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
                           <SERVER-CALL-POINTS>
-                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="883128ac-7537-4175-90ba-d1e64f0adbaf">
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="f929a218-2ff4-45cb-b3ff-b5e10761a961">
                               <SHORT-NAME>OpServerCallDem_SatelliteMainFunction_ReadData_CBReadData_OccurrenceCounter_OccurenceCounter</SHORT-NAME>
                               <OPERATION-IREF>
                                 <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemSatellite_0/CBReadData_OccurrenceCounter_OccurenceCounter</CONTEXT-R-PORT-REF>
@@ -5700,7 +5816,7 @@
                               </OPERATION-IREF>
                               <TIMEOUT>0</TIMEOUT>
                             </SYNCHRONOUS-SERVER-CALL-POINT>
-                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="1bc49bef-75cc-4148-958d-8a5bf6982a2a">
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="2ba545d6-ef89-4ffc-b41d-4a32b4002cd0">
                               <SHORT-NAME>OpServerCallDem_SatelliteMainFunction_ReadData_CBReadData_OdometerValue_OdometerValue</SHORT-NAME>
                               <OPERATION-IREF>
                                 <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemSatellite_0/CBReadData_OdometerValue_OdometerValue</CONTEXT-R-PORT-REF>

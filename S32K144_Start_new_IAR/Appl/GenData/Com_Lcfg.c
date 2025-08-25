@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Lcfg.c
- *   Generation Time: 2025-08-19 01:44:16
+ *   Generation Time: 2025-08-26 00:38:11
  *           Project: S32K144_Start - Version 1.0
  *          Delivery: CBD1800257_D01
  *      Tool Version: DaVinci Configurator  5.18.37 SP1
@@ -60,6 +60,7 @@
 
 #include "Com_Lcfg.h"
 
+#include "Appl_Cbk.h"
 
 #include "SchM_Com.h"
 
@@ -110,6 +111,26 @@
   CONFIGURATION CLASS: PRE_COMPILE
   SECTION: GLOBAL DATA
 **********************************************************************************************************************/
+/**********************************************************************************************************************
+  Com_CbkRxTOutFuncPtr
+**********************************************************************************************************************/
+/** 
+  \var    Com_CbkRxTOutFuncPtr
+  \brief  Function pointer table containing configured Rx timeout notifications for signals and signal groups.
+*/ 
+#define COM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(ComCbkRxTOutType, COM_CONST) Com_CbkRxTOutFuncPtr[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     CbkRxTOutFuncPtr      Referable Keys */
+  /*     0 */ Crash_Fault         /* [/ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx] */
+};
+#define COM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
 /**********************************************************************************************************************
   Com_ConstValueUInt16
 **********************************************************************************************************************/
@@ -186,6 +207,7 @@ CONST(Com_PduGrpVectorType, COM_CONST) Com_PduGrpVector[2] = {  /* PRQA S 1514, 
   BusAcc                    BUS access algorithm for signal or group signal packing / un-packing.
   InitValueIdx              the index of the 0:1 relation pointing to Com_ConstValueUInt8,Com_ConstValueUInt16,Com_ConstValueUInt32,Com_ConstValueUInt64,Com_ConstValueSInt8,Com_ConstValueSInt16,Com_ConstValueSInt32,Com_ConstValueSInt64,Com_ConstValueFloat32,Com_ConstValueFloat64
   RxPduInfoIdx              the index of the 1:1 relation pointing to Com_RxPduInfo
+  RxTOutInfoIdx             the index of the 0:1 relation pointing to Com_RxTOutInfo
   StartByteInPduPosition    Start Byte position of the signal or group signal within the I-PDU.
 */ 
 #define COM_START_SEC_CONST_UNSPECIFIED
@@ -193,13 +215,33 @@ CONST(Com_PduGrpVectorType, COM_CONST) Com_PduGrpVector[2] = {  /* PRQA S 1514, 
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(Com_RxAccessInfoType, COM_CONST) Com_RxAccessInfo[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    InitValueUsed  BitLength  BitPosition  BufferIdx  BusAcc                          InitValueIdx  RxPduInfoIdx  StartByteInPduPosition        Referable Keys */
-  { /*     0 */          TRUE,        4u,         20u,        0u,  COM_NBIT_BUSACCOFRXACCESSINFO,           0u,           0u,                     2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_CRASH_Mode_oVCU_Receive_oCAN00_5f8ab2fb_Rx, /ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx] */
-  { /*     1 */          TRUE,        4u,         16u,        1u,  COM_NBIT_BUSACCOFRXACCESSINFO,           0u,           0u,                     2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Driving_Mode_oVCU_Receive_oCAN00_f4e075c7_Rx, /ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx] */
-  { /*     2 */          TRUE,       16u,          0u,        0u, COM_NBYTE_BUSACCOFRXACCESSINFO,           0u,           0u,                     0u },  /* [/ActiveEcuC/Com/ComConfig/Vehicle_Speed_oVCU_Receive_oCAN00_b7e47cca_Rx, /ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx] */
-  { /*     3 */          TRUE,        1u,          2u,        2u,  COM_NBIT_BUSACCOFRXACCESSINFO,           0u,           1u,                     0u },  /* [/ActiveEcuC/Com/ComConfig/sig_State_RearInteriorLight_omsg_Receive_oCAN00_63323183_Rx, /ActiveEcuC/Com/ComConfig/msg_Receive_oCAN00_2b456e3f_Rx] */
-  { /*     4 */          TRUE,        1u,          0u,        3u,  COM_NBIT_BUSACCOFRXACCESSINFO,           0u,           1u,                     0u },  /* [/ActiveEcuC/Com/ComConfig/sig_State_RearLeftDoor_omsg_Receive_oCAN00_84ad4140_Rx, /ActiveEcuC/Com/ComConfig/msg_Receive_oCAN00_2b456e3f_Rx] */
-  { /*     5 */          TRUE,        1u,          1u,        4u,  COM_NBIT_BUSACCOFRXACCESSINFO,           0u,           1u,                     0u }   /* [/ActiveEcuC/Com/ComConfig/sig_State_RearRightDoor_omsg_Receive_oCAN00_a8945098_Rx, /ActiveEcuC/Com/ComConfig/msg_Receive_oCAN00_2b456e3f_Rx] */
+    /* Index    InitValueUsed  BitLength  BitPosition  BufferIdx  BusAcc                          InitValueIdx  RxPduInfoIdx  RxTOutInfoIdx                       StartByteInPduPosition        Referable Keys */
+  { /*     0 */          TRUE,        4u,         20u,        0u,  COM_NBIT_BUSACCOFRXACCESSINFO,           0u,           0u,                                 0u,                     2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_CRASH_Mode_oVCU_Receive_oCAN00_5f8ab2fb_Rx, /ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx] */
+  { /*     1 */          TRUE,        4u,         16u,        1u,  COM_NBIT_BUSACCOFRXACCESSINFO,           0u,           0u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Driving_Mode_oVCU_Receive_oCAN00_f4e075c7_Rx, /ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx] */
+  { /*     2 */          TRUE,       16u,          0u,        0u, COM_NBYTE_BUSACCOFRXACCESSINFO,           0u,           0u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     0u },  /* [/ActiveEcuC/Com/ComConfig/Vehicle_Speed_oVCU_Receive_oCAN00_b7e47cca_Rx, /ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx] */
+  { /*     3 */          TRUE,        1u,          2u,        2u,  COM_NBIT_BUSACCOFRXACCESSINFO,           0u,           1u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     0u },  /* [/ActiveEcuC/Com/ComConfig/sig_State_RearInteriorLight_omsg_Receive_oCAN00_63323183_Rx, /ActiveEcuC/Com/ComConfig/msg_Receive_oCAN00_2b456e3f_Rx] */
+  { /*     4 */          TRUE,        1u,          0u,        3u,  COM_NBIT_BUSACCOFRXACCESSINFO,           0u,           1u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     0u },  /* [/ActiveEcuC/Com/ComConfig/sig_State_RearLeftDoor_omsg_Receive_oCAN00_84ad4140_Rx, /ActiveEcuC/Com/ComConfig/msg_Receive_oCAN00_2b456e3f_Rx] */
+  { /*     5 */          TRUE,        1u,          1u,        4u,  COM_NBIT_BUSACCOFRXACCESSINFO,           0u,           1u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     0u }   /* [/ActiveEcuC/Com/ComConfig/sig_State_RearRightDoor_omsg_Receive_oCAN00_a8945098_Rx, /ActiveEcuC/Com/ComConfig/msg_Receive_oCAN00_2b456e3f_Rx] */
+};
+#define COM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_RxCbkFuncPtr
+**********************************************************************************************************************/
+/** 
+  \var    Com_RxCbkFuncPtr
+  \brief  Function pointer table containing configured notification and invalid notifications function pointer for signals and signal groups.
+*/ 
+#define COM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(ComRxCbkType, COM_CONST) Com_RxCbkFuncPtr[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     RxCbkFuncPtr       Referable Keys */
+  /*     0 */ Crash_Success    /* [/ActiveEcuC/Com/ComConfig/VCU_CRASH_Mode_oVCU_Receive_oCAN00_5f8ab2fb_RxAck] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -239,10 +281,13 @@ CONST(Com_RxPduGrpInfoType, COM_CONST) Com_RxPduGrpInfo[2] = {  /* PRQA S 1514, 
   \details
   Element                   Description
   RxAccessInfoIndUsed       TRUE, if the 0:n relation has 1 relation pointing to Com_RxAccessInfoInd
+  RxTOutInfoUsed            TRUE, if the 0:1 relation has minimum 1 relation pointing to Com_RxTOutInfo
   RxDefPduBufferLength      the number of relations pointing to Com_RxDefPduBuffer
   RxDefPduBufferStartIdx    the start index of the 0:n relation pointing to Com_RxDefPduBuffer
   RxSigInfoEndIdx           the end index of the 0:n relation pointing to Com_RxSigInfo
   RxSigInfoStartIdx         the start index of the 0:n relation pointing to Com_RxSigInfo
+  RxTOutInfoIndEndIdx       the end index of the 0:n relation pointing to Com_RxTOutInfoInd
+  RxTOutInfoIndStartIdx     the start index of the 0:n relation pointing to Com_RxTOutInfoInd
   Type                      Defines whether rx Pdu is a NORMAL or TP IPdu.
 */ 
 #define COM_START_SEC_CONST_UNSPECIFIED
@@ -250,9 +295,9 @@ CONST(Com_RxPduGrpInfoType, COM_CONST) Com_RxPduGrpInfo[2] = {  /* PRQA S 1514, 
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(Com_RxPduInfoType, COM_CONST) Com_RxPduInfo[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    RxAccessInfoIndUsed  RxDefPduBufferLength  RxDefPduBufferStartIdx  RxSigInfoEndIdx  RxSigInfoStartIdx  Type                              Referable Keys */
-  { /*     0 */                TRUE,                   4u,                     0u,              3u,                0u, COM_NORMAL_TYPEOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx, /ActiveEcuC/Com/ComConfig/MyECU_oCAN00_Rx_4cbf71f7] */
-  { /*     1 */                TRUE,                   1u,                     4u,              6u,                3u, COM_NORMAL_TYPEOFRXPDUINFO }   /* [/ActiveEcuC/Com/ComConfig/msg_Receive_oCAN00_2b456e3f_Rx, /ActiveEcuC/Com/ComConfig/MyECU_oCAN00_Rx_4cbf71f7] */
+    /* Index    RxAccessInfoIndUsed  RxTOutInfoUsed  RxDefPduBufferLength  RxDefPduBufferStartIdx  RxSigInfoEndIdx  RxSigInfoStartIdx  RxTOutInfoIndEndIdx                    RxTOutInfoIndStartIdx                    Type                              Referable Keys */
+  { /*     0 */                TRUE,           TRUE,                   4u,                     0u,              3u,                0u,                                    1u,                                      0u, COM_NORMAL_TYPEOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx, /ActiveEcuC/Com/ComConfig/MyECU_oCAN00_Rx_4cbf71f7] */
+  { /*     1 */                TRUE,          FALSE,                   1u,                     4u,              6u,                3u, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO, COM_NORMAL_TYPEOFRXPDUINFO }   /* [/ActiveEcuC/Com/ComConfig/msg_Receive_oCAN00_2b456e3f_Rx, /ActiveEcuC/Com/ComConfig/MyECU_oCAN00_Rx_4cbf71f7] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -267,6 +312,8 @@ CONST(Com_RxPduInfoType, COM_CONST) Com_RxPduInfo[2] = {  /* PRQA S 1514, 1533 *
   \brief  Contains all relevant information for Rx signals.
   \details
   Element             Description
+  RxTOutInfoUsed      TRUE, if the 0:1 relation has minimum 1 relation pointing to Com_RxTOutInfo
+  RxTOutInfoIdx       the index of the 0:1 relation pointing to Com_RxTOutInfo
   SignalProcessing
   ValidDlc            Minimum length of PDU required to completely receive the signal or signal group.
 */ 
@@ -275,13 +322,13 @@ CONST(Com_RxPduInfoType, COM_CONST) Com_RxPduInfo[2] = {  /* PRQA S 1514, 1533 *
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(Com_RxSigInfoType, COM_CONST) Com_RxSigInfo[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    SignalProcessing                          ValidDlc        Referable Keys */
-  { /*     0 */ COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       3u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx] */
-  { /*     1 */ COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       3u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx] */
-  { /*     2 */ COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx] */
-  { /*     3 */ COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       1u },  /* [/ActiveEcuC/Com/ComConfig/msg_Receive_oCAN00_2b456e3f_Rx] */
-  { /*     4 */ COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       1u },  /* [/ActiveEcuC/Com/ComConfig/msg_Receive_oCAN00_2b456e3f_Rx] */
-  { /*     5 */ COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       1u }   /* [/ActiveEcuC/Com/ComConfig/msg_Receive_oCAN00_2b456e3f_Rx] */
+    /* Index    RxTOutInfoUsed  RxTOutInfoIdx                    SignalProcessing                          ValidDlc        Referable Keys */
+  { /*     0 */           TRUE,                              0u, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       3u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx] */
+  { /*     1 */          FALSE, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       3u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx] */
+  { /*     2 */          FALSE, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx] */
+  { /*     3 */          FALSE, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       1u },  /* [/ActiveEcuC/Com/ComConfig/msg_Receive_oCAN00_2b456e3f_Rx] */
+  { /*     4 */          FALSE, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       1u },  /* [/ActiveEcuC/Com/ComConfig/msg_Receive_oCAN00_2b456e3f_Rx] */
+  { /*     5 */          FALSE, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       1u }   /* [/ActiveEcuC/Com/ComConfig/msg_Receive_oCAN00_2b456e3f_Rx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -295,16 +342,17 @@ CONST(Com_RxSigInfoType, COM_CONST) Com_RxSigInfo[6] = {  /* PRQA S 1514, 1533 *
   \var    Com_TxModeFalse
   \brief  Contains all relevant information for transmission mode false.
   \details
-  Element     Description
-  Periodic    TRUE if transmission mode contains a cyclic part.
+  Element       Description
+  TimePeriod    Cycle time factor.
 */ 
 #define COM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    Periodic        Referable Keys */
-  { /*     0 */     TRUE }   /* [/ActiveEcuC/Com/ComConfig/VCU_Com_Pdu, /ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx, /ActiveEcuC/Com/ComConfig/msg_MyECU_Lamp_oCAN00_818e1651_Tx, /ActiveEcuC/Com/ComConfig/msg_Transmit_oCAN00_0723e95e_Tx] */
+CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    TimePeriod        Referable Keys */
+  { /*     0 */         0u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx] */
+  { /*     1 */        10u }   /* [/ActiveEcuC/Com/ComConfig/VCU_Com_Pdu, /ActiveEcuC/Com/ComConfig/msg_MyECU_Lamp_oCAN00_818e1651_Tx, /ActiveEcuC/Com/ComConfig/msg_Transmit_oCAN00_0723e95e_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -329,10 +377,10 @@ CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[1] = {  /* PRQA S 1514, 15
 /*lint -restore */
 CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    InitMode  TxModeFalseIdx  TxModeTrueIdx        Referable Keys */
-  { /*     0 */     TRUE,             0u,            1u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Com_Pdu] */
-  { /*     1 */     TRUE,             0u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx] */
-  { /*     2 */     TRUE,             0u,            0u },  /* [/ActiveEcuC/Com/ComConfig/msg_MyECU_Lamp_oCAN00_818e1651_Tx] */
-  { /*     3 */     TRUE,             0u,            0u }   /* [/ActiveEcuC/Com/ComConfig/msg_Transmit_oCAN00_0723e95e_Tx] */
+  { /*     0 */     TRUE,             1u,            2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Com_Pdu] */
+  { /*     1 */     TRUE,             0u,            1u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx] */
+  { /*     2 */     TRUE,             1u,            0u },  /* [/ActiveEcuC/Com/ComConfig/msg_MyECU_Lamp_oCAN00_818e1651_Tx] */
+  { /*     3 */     TRUE,             1u,            0u }   /* [/ActiveEcuC/Com/ComConfig/msg_Transmit_oCAN00_0723e95e_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -348,16 +396,19 @@ CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[4] = {  /* PRQA S 1514, 1533
   \details
   Element       Description
   Periodic      TRUE if transmission mode contains a cyclic part.
+  RepCnt        Repetition count for replication of transmission requests plus one initial transmit.
+  RepPeriod     Repetition period factor for replication of transmission requests.
   TimePeriod    Cycle time factor.
 */ 
 #define COM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxModeTrueType, COM_CONST) Com_TxModeTrue[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    Periodic  TimePeriod        Referable Keys */
-  { /*     0 */     TRUE,        10u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx, /ActiveEcuC/Com/ComConfig/msg_MyECU_Lamp_oCAN00_818e1651_Tx, /ActiveEcuC/Com/ComConfig/msg_Transmit_oCAN00_0723e95e_Tx] */
-  { /*     1 */     TRUE,         1u }   /* [/ActiveEcuC/Com/ComConfig/VCU_Com_Pdu] */
+CONST(Com_TxModeTrueType, COM_CONST) Com_TxModeTrue[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    Periodic  RepCnt  RepPeriod  TimePeriod        Referable Keys */
+  { /*     0 */     TRUE,     0u,        0u,        10u },  /* [/ActiveEcuC/Com/ComConfig/msg_MyECU_Lamp_oCAN00_818e1651_Tx, /ActiveEcuC/Com/ComConfig/msg_Transmit_oCAN00_0723e95e_Tx] */
+  { /*     1 */     TRUE,     5u,       10u,        50u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx] */
+  { /*     2 */     TRUE,     0u,        0u,         1u }   /* [/ActiveEcuC/Com/ComConfig/VCU_Com_Pdu] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -481,14 +532,15 @@ CONST(Com_TxPduInitValueType, COM_CONST) Com_TxPduInitValue[19] = {  /* PRQA S 1
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxSigInfoType, COM_CONST) Com_TxSigInfo[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxSigInfoType, COM_CONST) Com_TxSigInfo[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    ApplType                         BitLength  BitPosition  BusAcc                             ByteLength  StartByteInPduPosition  TxBufferEndIdx  TxBufferStartIdx  TxPduInfoIdx        Referable Keys */
   { /*     0 */   COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,         12u,        COM_NBIT_BUSACCOFTXSIGINFO,         0u,                     1u,             4u,               3u,           1u },  /* [/ActiveEcuC/Com/ComConfig/Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx, /ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx] */
   { /*     1 */  COM_UINT16_APPLTYPEOFTXSIGINFO,       16u,         16u,       COM_NBYTE_BUSACCOFTXSIGINFO,         2u,                     2u,             6u,               4u,           1u },  /* [/ActiveEcuC/Com/ComConfig/Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx, /ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx] */
   { /*     2 */ COM_UINT8_N_APPLTYPEOFTXSIGINFO,       16u,          0u, COM_ARRAY_BASED_BUSACCOFTXSIGINFO,         2u,                     0u,             2u,               0u,           0u },  /* [/ActiveEcuC/Com/ComConfig/Ignition_State, /ActiveEcuC/Com/ComConfig/VCU_Com_Pdu] */
-  { /*     3 */  COM_UINT16_APPLTYPEOFTXSIGINFO,       12u,          0u,   COM_NBITNBYTE_BUSACCOFTXSIGINFO,         1u,                     0u,             4u,               2u,           1u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Accelerator_Pedal_Position_oVCU_Start_oCAN00_a7808b9c_Tx, /ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx] */
-  { /*     4 */   COM_UINT8_APPLTYPEOFTXSIGINFO,        8u,          0u,        COM_BYTE_BUSACCOFTXSIGINFO,         1u,                     0u,            11u,              10u,           2u },  /* [/ActiveEcuC/Com/ComConfig/sig_LampCnt_omsg_MyECU_Lamp_oCAN00_f37e68ea_Tx, /ActiveEcuC/Com/ComConfig/msg_MyECU_Lamp_oCAN00_818e1651_Tx] */
-  { /*     5 */   COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,          0u,        COM_NBIT_BUSACCOFTXSIGINFO,         0u,                     0u,            19u,              18u,           3u }   /* [/ActiveEcuC/Com/ComConfig/sig_RearInteriorLight_omsg_Transmit_oCAN00_49a633c1_Tx, /ActiveEcuC/Com/ComConfig/msg_Transmit_oCAN00_0723e95e_Tx] */
+  { /*     3 */   COM_UINT8_APPLTYPEOFTXSIGINFO,        8u,         32u,        COM_BYTE_BUSACCOFTXSIGINFO,         1u,                     4u,             7u,               6u,           1u },  /* [/ActiveEcuC/Com/ComConfig/Ignition_State_oVCU_Start_oCAN00_1302dbd4_Tx, /ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx] */
+  { /*     4 */  COM_UINT16_APPLTYPEOFTXSIGINFO,       12u,          0u,   COM_NBITNBYTE_BUSACCOFTXSIGINFO,         1u,                     0u,             4u,               2u,           1u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Accelerator_Pedal_Position_oVCU_Start_oCAN00_a7808b9c_Tx, /ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx] */
+  { /*     5 */   COM_UINT8_APPLTYPEOFTXSIGINFO,        8u,          0u,        COM_BYTE_BUSACCOFTXSIGINFO,         1u,                     0u,            11u,              10u,           2u },  /* [/ActiveEcuC/Com/ComConfig/sig_LampCnt_omsg_MyECU_Lamp_oCAN00_f37e68ea_Tx, /ActiveEcuC/Com/ComConfig/msg_MyECU_Lamp_oCAN00_818e1651_Tx] */
+  { /*     6 */   COM_UINT8_APPLTYPEOFTXSIGINFO,        1u,          0u,        COM_NBIT_BUSACCOFTXSIGINFO,         0u,                     0u,            19u,              18u,           3u }   /* [/ActiveEcuC/Com/ComConfig/sig_RearInteriorLight_omsg_Transmit_oCAN00_49a633c1_Tx, /ActiveEcuC/Com/ComConfig/msg_Transmit_oCAN00_0723e95e_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -721,6 +773,23 @@ VAR(Com_RxDefPduBufferUType, COM_VAR_NOINIT) Com_RxDefPduBuffer;  /* PRQA S 0759
 /*lint -restore */
 
 /**********************************************************************************************************************
+  Com_RxDeferredFctPtrCache
+**********************************************************************************************************************/
+/** 
+  \var    Com_RxDeferredFctPtrCache
+  \brief  Cache for deferred Rx (invalid) notification.
+*/ 
+#define COM_START_SEC_VAR_NOINIT_32BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(Com_RxDeferredFctPtrCacheType, COM_VAR_NOINIT) Com_RxDeferredFctPtrCache[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+#define COM_STOP_SEC_VAR_NOINIT_32BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   Com_RxDeferredProcessingISRLockCounter
 **********************************************************************************************************************/
 #define COM_START_SEC_VAR_NOINIT_16BIT
@@ -742,6 +811,26 @@ VAR(Com_RxDeferredProcessingISRLockCounterType, COM_VAR_NOINIT) Com_RxDeferredPr
 /*lint -restore */
 VAR(Com_RxIPduGroupISRLockCounterType, COM_VAR_NOINIT) Com_RxIPduGroupISRLockCounter;  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define COM_STOP_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_RxPduDmState
+**********************************************************************************************************************/
+/** 
+  \var    Com_RxPduDmState
+  \brief  Rx I-PDU based deadline monitoring state (started/stopped) of the corresponding I-PDU-Group.
+*/ 
+#define COM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(Com_RxPduDmStateType, COM_VAR_NOINIT) Com_RxPduDmState[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/VCU_CRASH_Mode_oVCU_Receive_oCAN00_5f8ab2fb_Rx, /ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx, /ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_RxPduBased] */
+
+#define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -812,6 +901,26 @@ VAR(Com_RxSigBufferUInt8Type, COM_VAR_NOINIT) Com_RxSigBufferUInt8[5];  /* PRQA 
 /*lint -restore */
 
 /**********************************************************************************************************************
+  Com_RxTOutCnt
+**********************************************************************************************************************/
+/** 
+  \var    Com_RxTOutCnt
+  \brief  This array holds timeout counters for all Rx timeout objects.
+*/ 
+#define COM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(Com_RxTOutCntType, COM_VAR_NOINIT) Com_RxTOutCnt[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/VCU_CRASH_Mode_oVCU_Receive_oCAN00_5f8ab2fb_Rx, /ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_Rx, /ActiveEcuC/Com/ComConfig/VCU_Receive_oCAN00_ea3d327e_RxPduBased] */
+
+#define COM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   Com_TransmitRequest
 **********************************************************************************************************************/
 /** 
@@ -853,7 +962,8 @@ VAR(Com_TxBufferType, COM_VAR_NOINIT) Com_TxBuffer[19];  /* PRQA S 1514, 1533 */
   /*     3 */  /* [/ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx, /ActiveEcuC/Com/ComConfig/Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx, /ActiveEcuC/Com/ComConfig/VCU_Accelerator_Pedal_Position_oVCU_Start_oCAN00_a7808b9c_Tx] */
   /*     4 */  /* [/ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx, /ActiveEcuC/Com/ComConfig/Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx] */
   /*     5 */  /* [/ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx, /ActiveEcuC/Com/ComConfig/Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx] */
-  /*     6 */  /* [/ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx] */
+  /*     6 */  /* [/ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx, /ActiveEcuC/Com/ComConfig/Ignition_State_oVCU_Start_oCAN00_1302dbd4_Tx] */
+  /*     7 */  /* [/ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx] */
   /*   ... */  /* [/ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx] */
   /*     9 */  /* [/ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx] */
   /*    10 */  /* [/ActiveEcuC/Com/ComConfig/msg_MyECU_Lamp_oCAN00_818e1651_Tx, /ActiveEcuC/Com/ComConfig/sig_LampCnt_omsg_MyECU_Lamp_oCAN00_f37e68ea_Tx] */

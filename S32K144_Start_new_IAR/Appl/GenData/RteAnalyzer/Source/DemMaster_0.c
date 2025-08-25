@@ -867,6 +867,57 @@ FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_GetDTCStatusAvailabilityMask(uint8 Cl
 
 /**********************************************************************************************************************
  *
+ * Runnable Entity Name: GetDTCSuppression
+ *
+ * This runnable can be invoked concurrently (reentrant implementation).
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <GetDTCSuppression> of PortPrototype <ControlDTCSuppression_DemClient>
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   Std_ReturnType Dem_GetDTCSuppression(boolean *SuppressionStatus)
+ *
+ **********************************************************************************************************************
+ *
+ * Available Application Errors:
+ * =============================
+ *   RTE_E_DTCSuppression_DEM_PENDING
+ *   RTE_E_DTCSuppression_DEM_WRONG_DTC
+ *   RTE_E_DTCSuppression_DEM_WRONG_DTCORIGIN
+ *   RTE_E_DTCSuppression_E_NOT_OK
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: GetDTCSuppression_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_GetDTCSuppression(uint8 parg0, P2VAR(boolean, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) SuppressionStatus) /* PRQA S 0850 */ /* MD_MSR_19.8 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: Dem_GetDTCSuppression (returns application error)
+ *********************************************************************************************************************/
+
+  return RTE_E_OK;
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
  * Runnable Entity Name: GetDebouncingOfEvent
  *
  * This runnable can be invoked concurrently (reentrant implementation).
@@ -1588,6 +1639,57 @@ FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_SelectDTC(uint8 parg0, uint32 DTC, De
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Dem_SelectDTC (returns application error)
+ *********************************************************************************************************************/
+
+  return RTE_E_OK;
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: SetDTCSuppression
+ *
+ * This runnable can be invoked concurrently (reentrant implementation).
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <SetDTCSuppression> of PortPrototype <ControlDTCSuppression_DemClient>
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   Std_ReturnType Dem_SetDTCSuppression(boolean SuppressionStatus)
+ *
+ **********************************************************************************************************************
+ *
+ * Available Application Errors:
+ * =============================
+ *   RTE_E_DTCSuppression_DEM_PENDING
+ *   RTE_E_DTCSuppression_DEM_WRONG_DTC
+ *   RTE_E_DTCSuppression_DEM_WRONG_DTCORIGIN
+ *   RTE_E_DTCSuppression_E_NOT_OK
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: SetDTCSuppression_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_SetDTCSuppression(uint8 parg0, boolean SuppressionStatus) /* PRQA S 0850 */ /* MD_MSR_19.8 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: Dem_SetDTCSuppression (returns application error)
  *********************************************************************************************************************/
 
   return RTE_E_OK;

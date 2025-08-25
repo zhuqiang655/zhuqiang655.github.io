@@ -77,7 +77,8 @@
 
 #define CtLedTask_START_SEC_CODE
 #include "CtLedTask_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_19.1 */
-
+#include "Com_Cfg.h"
+#include "Com.h"
 /**********************************************************************************************************************
  *
  * Runnable Entity Name: CtLedTask_InitRunnable
@@ -158,20 +159,47 @@ FUNC(void, CtLedTask_CODE) LedRunnable(void) /* PRQA S 0850 */ /* MD_MSR_19.8 */
 
 static unsigned char  LedState=0;
 static int  LedCnt=0;
+static unsigned char Brake = 1;
+static unsigned char Drive = 0;
+static unsigned char KeyFlag=0;
+KeyFlag = Dio_ReadChannel(DioConf_DioChannel_DioChannel_PTD12);
+if (KeyFlag == 1)
+{
+    LedCnt++;
+}
+if (LedCnt % 2 == 0)
+{
+    Dio_WriteChannel(DioConf_DioChannel_DioChannel_PTD0,0);
+    Com_SendSignal(ComConf_ComSignal_Ignition_State_oVCU_Start_oCAN00_1302dbd4_Tx,&Brake); 
+}
+else
+{
+    Dio_WriteChannel(DioConf_DioChannel_DioChannel_PTD0,1);
+    Com_SendSignal(ComConf_ComSignal_Ignition_State_oVCU_Start_oCAN00_1302dbd4_Tx,&Drive); 
+}
 
-LedCnt++;
-
-LedState ^= 0x01;
 
 
 
- Dio_WriteChannel(112,LedState);
+
+
+
+//LedState ^= 0x01;
+/* Rte_Write_Brake_signal_u8sig(1);
+Rte_Write_Drive_Standy_u8sig(4); */
+
+// Dio_WriteChannel(112,LedState);
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
 }
-
+FUNC(void, COM_APPL_CODE) Crash_Fault(void){
+    Rte_Write_Drive_Standy_u8sig(40);
+}
+FUNC(void, COM_APPL_CODE) Crash_Success(void){
+    Rte_Write_Drive_Standy_u8sig(10);
+}
 
 #define CtLedTask_STOP_SEC_CODE
 #include "CtLedTask_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_19.1 */
